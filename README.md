@@ -3,13 +3,13 @@
 ### A bot that can play music on Telegram Group and Channel Voice Chats
 
 <p align="center">
-  <a href="https://github.com/LushaiMusic/GroupMusicBot">
-     <img height="30px" src="https://img.shields.io/badge/Group%20Music%20Bot-red?style=for-the-badge&logo=github">
+  <a href="https://telegram.dog/MT_MusicPlayer_BoT">
+     <img height="30px" src="https://img.shields.io/badge/Group%20Music%20Bot Demo-red?style=for-the-badge&logo=github">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://telegra.ph/file/b569577a0593b51cd53ab.png">
+  <a href="https://telegra.ph/file/81ebd8768d935ae8689bb.jpg">
      <img height="150px" src="https://telegra.ph/file/b569577a0593b51cd53ab.png">
   </a>
 </p>
@@ -19,12 +19,12 @@
 Before clicking on deploy to heroku just click on fork and star just below
 
 <p align="center">
-  <a href="https://github.com/LushaiMusic/GroupMusicBot/fork">
-    <img src="https://img.shields.io/github/forks/LushaiMusic/GroupMusicBot?label=Fork&style=social">
+  <a href="https://github.com/MRK-YT/MT-GroupMusic-Bot/fork">
+    <img src="https://img.shields.io/github/forks/MRK-YT/MT-GroupMusic-Bot?label=Fork&style=social">
     
   </a>
-  <a href="https://github.com/LushaiMusic/GroupMusicBot">
-    <img src="https://img.shields.io/github/stars/LushaiMusic/GroupMusicBot?style=social">
+  <a href="https://github.com/MRK-YT/MT-GroupMusic-Bot">
+    <img src="https://img.shields.io/github/stars/MoTechYT/MT-GroupMusic-Bot?style=social">
   </a>
 </p>
 
@@ -37,7 +37,7 @@ Click the below button to watch the video tutorial on deploying
 
 ### Deploy To Heroku 📡</h4>
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/LushaiMusic/GroupMusicBot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="210" height="34.45"/></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/MRK-YT/MT-GroupMusic-Bot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="210" height="34.45"/></a></p>
 
 ###  GET STRING SESSION FROM REPL RUN
 
@@ -65,7 +65,7 @@ Click the below button to watch the video tutorial on deploying
 ### ⚔ Self-hosting (For Devs) 
 ```sh
 # Install Git First (apt-instll git)
-$ git clone https://github.com/LushaiMusic/GroupMusicBot
+$ git clone https://github.com/MRK-YT/MT-GroupMusic-Bot
 $ cd GroupMusicBot
 # Upgrade sources
 # Install All Requirements 
@@ -120,7 +120,7 @@ For linked group admins only:
 If you donlt like to play in linked channel:
  1. Get your channel ID.
  2. Rename your group to: Channel Music: your_channel_id
- 3. Add @ZK_GvCBot as Channel admin with full perms
+ 3. Add @MT_MusicPlayer_BoT as Channel admin with full perms
  4. add helper to channel
  5. Simply send commands in your group.
 
