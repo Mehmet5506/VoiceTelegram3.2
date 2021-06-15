@@ -8,6 +8,6 @@ from MusicBot.services.callsmusic.callsmusic import client as USER
 async def pmPermit(client: USER, message: Message):
     await USER.send_message(
         message.chat.id,
-        "MT_PM_MESSAGE_TEXT",
+        " MT_PM_MESSAGE_TEXT ",
     )
     return
