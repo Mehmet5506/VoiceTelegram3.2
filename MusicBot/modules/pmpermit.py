@@ -1,6 +1,6 @@
 from pyrogram import filters
 from pyrogram.types import Message
-
+from MusicBot.config import MT_PM_MESSAGE_TEXT
 from MusicBot.services.callsmusic.callsmusic import client as USER
 
 
@@ -8,6 +8,6 @@ from MusicBot.services.callsmusic.callsmusic import client as USER
 async def pmPermit(client: USER, message: Message):
     await USER.send_message(
         message.chat.id,
-        "**Hi there, This is a music assistant service @MT_Music_BoT {Private Bot}.**",
+        "**{MT_PM_MESSAGE_TEXT}**",
     )
     return
