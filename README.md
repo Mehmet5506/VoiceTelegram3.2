@@ -48,6 +48,7 @@ Click the below button to watch the video tutorial on deploying
 <details><summary>GET STRING SESSION FROM REPL RUN</summary>
 <p>
 <br>
+
  [![Run on Repl.it](https://camo.githubusercontent.com/05149b448485553c6f14f6430a45c12dcc79ed3c/68747470733a2f2f7265706c2e69742f62616467652f6769746875622f6a61727669733231303930342f4a6172766973)](https://replit.com/@ZauteKm/GenerateStringSession#main.py)
 </pre>
 </p>
@@ -55,7 +56,7 @@ Click the below button to watch the video tutorial on deploying
 
 <details><summary>Features✨</summary>
 <p>
-<br>
+<pre>
 - Thumbnail Support
 - Playlist Support
 - Current playback support
@@ -72,7 +73,7 @@ Click the below button to watch the video tutorial on deploying
 
 <details><summary>Requirements 📝</summary>
 <p>
-<br>
+<pre>
 - FFmpeg
 - NodeJS [nodesource.com](https://nodesource.com/)
 - Python 3.7+
@@ -81,7 +82,7 @@ Click the below button to watch the video tutorial on deploying
  
 <details><summary>Requirements 📝</summary>
 <p>
-<br>
+<pre>
 # Install Git First (apt-instll git)
 $ git clone https://github.com/MRK-YT/MT-GroupMusic-Bot
 $ cd MT-GroupMusic-Bot
@@ -98,7 +99,7 @@ $ python(3) -m MusicBot
 
 <details><summary>Commands for Group 🛠</summary>
 <p>
-<br>
+<pre>
 #### For all in group
 
 - `/play <song name>` - play song you requested
@@ -118,7 +119,7 @@ $ python(3) -m MusicBot
 
 <details><summary>Admins only</summary>
 <p>
-<br>
+<pre>
 - `/player` - open music player settings panel
 - `/pause` - pause song play
 - `/resume` - resume song play
@@ -133,7 +134,7 @@ $ python(3) -m MusicBot
 
 <details><summary>Commands for Channel Music Play 🛠</summary>
 <p>
-<br>
+<pre>
 For linked group admins only:
 - `/cplay <song name>` - play song you requested
 - `/cplay <reply to audio>` - play replied file
@@ -159,7 +160,7 @@ If you donlt like to play in linked channel:
 
 <details><summary>Commands for Sudo Users ⚔️</summary>
 <p>
-<br>
+<pre>
 - `/userbotleaveall` - remove assistant from all chats
 - `/gcast <reply to message>` - globally brodcast replied message to all chats
 - `/pmpermit [on/off]` - enable/disable pmpermit message
@@ -169,7 +170,7 @@ If you donlt like to play in linked channel:
 
 <details><summary>Pmpermit</summary>
 <p>
-<br>
+<pre>
 - `.a` - approove someone to pm you
 - `.da` - disapproove someone to pm you
 + Sudo Users can execute any command in any groups
@@ -179,15 +180,12 @@ If you donlt like to play in linked channel:
 
 <details><summary>Credits</summary>
 <p>
-<br>
+<pre>
 #### Special Credits
 - [Rojserbest](http://github.com/rojserbes): Callsmusic Developer
-</pre>
-</p>
-</details>
 
 
-                                                           
+#### Editing....                                                          
 <img src="https://telegra.ph/file/9e831d15da94deb56ef4c.jpg" width="200" height="200"><br>
 <img src="https://badgen.net/badge/Name/Mrk YT/FF33FF?icon=awesome&labelColor=0080FF"></a>
 <img src="https://badgen.net/badge/Skills/😞/purple?icon=terminal&labelColor=red"></a>
