@@ -28,23 +28,34 @@ Before clicking on deploy to heroku just click on fork and star just below
   </a>
 </p>
 
-## How to deploy 
-
+##  
+<details><summary>How to deploy</summary>
+<p>
+<br>
 Click the below button to watch the video tutorial on deploying
 
 <a href="https://youtu.be/koAzUgNQaDU"><img src="https://img.shields.io/badge/How%20To%20Deploy-blue.svg?logo=Youtube"></a>
 <a href="https://youtu.be/koAzUgNQaDU"><img src="https://img.shields.io/youtube/views/koAzUgNQaDU?style=social">
 
-### Deploy To Heroku 📡</h4>
 
+#### Deploy To Heroku 
 <p align="center"><a href="https://heroku.com/deploy?template=https://github.com/MRK-YT/MT-GroupMusic-Bot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="210" height="34.45"/></a></p>
+</pre>
+</p>
+</details>
 
-###  GET STRING SESSION FROM REPL RUN
 
+<details><summary>GET STRING SESSION FROM REPL RUN</summary>
+<p>
+<br>
  [![Run on Repl.it](https://camo.githubusercontent.com/05149b448485553c6f14f6430a45c12dcc79ed3c/68747470733a2f2f7265706c2e69742f62616467652f6769746875622f6a61727669733231303930342f4a6172766973)](https://replit.com/@ZauteKm/GenerateStringSession#main.py)
+</pre>
+</p>
+</details>
 
-### Features✨
-
+<details><summary>Features✨</summary>
+<p>
+<br>
 - Thumbnail Support
 - Playlist Support
 - Current playback support
@@ -55,18 +66,25 @@ Click the below button to watch the video tutorial on deploying
 - Control with buttons
 - Userbot auto join
 - Channel Music Play
-### Requirements 📝
+</pre>
+</p>
+</details>
 
+<details><summary>Requirements 📝</summary>
+<p>
+<br>
 - FFmpeg
 - NodeJS [nodesource.com](https://nodesource.com/)
 - Python 3.7+
 - [PyTgCalls](https://github.com/pytgcalls/pytgcalls)
 
-### ⚔ Self-hosting (For Devs) 
-```sh
+ 
+<details><summary>Requirements 📝</summary>
+<p>
+<br>
 # Install Git First (apt-instll git)
 $ git clone https://github.com/MRK-YT/MT-GroupMusic-Bot
-$ cd GroupMusicBot
+$ cd MT-GroupMusic-Bot
 # Upgrade sources
 # Install All Requirements 
 $ pip(3) install -r requirements.txt
@@ -74,9 +92,13 @@ $ pip(3) install -r requirements.txt
 $ npm i -g npm
 # Start Bot 
 $ python(3) -m MusicBot
-```
+</pre>
+</p>
+</details>
 
-### Commands for Group 🛠
+<details><summary>Commands for Group 🛠</summary>
+<p>
+<br>
 #### For all in group
 
 - `/play <song name>` - play song you requested
@@ -90,8 +112,13 @@ $ python(3) -m MusicBot
 - `/deezer <song name>` - download songs you want quickly via deezer
 - `/saavn <song name>` - download songs you want quickly via saavn
 - `/video <song name>` - download videos you want quickly
+</pre>
+</p>
+</details>
 
-#### Admins only.
+<details><summary>Admins only</summary>
+<p>
+<br>
 - `/player` - open music player settings panel
 - `/pause` - pause song play
 - `/resume` - resume song play
@@ -100,8 +127,13 @@ $ python(3) -m MusicBot
 - `/userbotjoin` - invite assistant to your chat
 - `/userbotleave` - remove assistant from your chat
 - `/reload` - Refresh admin list
+</pre>
+</p>
+</details>
 
-### Commands for Channel Music Play 🛠
+<details><summary>Commands for Channel Music Play 🛠</summary>
+<p>
+<br>
 For linked group admins only:
 - `/cplay <song name>` - play song you requested
 - `/cplay <reply to audio>` - play replied file
@@ -120,20 +152,64 @@ For linked group admins only:
 If you donlt like to play in linked channel:
  1. Get your channel ID.
  2. Rename your group to: Channel Music: your_channel_id
- 3. Add @MT_MusicPlayer_BoT as Channel admin with full perms
- 4. add helper to channel
- 5. Simply send commands in your group.
+ 3. Simply send commands in your group.
+</pre>
+</p>
+</details>
 
-### Commands for Sudo Users ⚔️
+<details><summary>Commands for Sudo Users ⚔️</summary>
+<p>
+<br>
 - `/userbotleaveall` - remove assistant from all chats
 - `/gcast <reply to message>` - globally brodcast replied message to all chats
 - `/pmpermit [on/off]` - enable/disable pmpermit message
+</pre>
+</p>
+</details>
 
-#### Pmpermit
+<details><summary>Pmpermit</summary>
+<p>
+<br>
 - `.a` - approove someone to pm you
 - `.da` - disapproove someone to pm you
 + Sudo Users can execute any command in any groups
+</pre>
+</p>
+</details>
 
-### Credits
+<details><summary>Credits</summary>
+<p>
+<br>
 #### Special Credits
 - [Rojserbest](http://github.com/rojserbes): Callsmusic Developer
+</pre>
+</p>
+</details>
+
+
+                                                           
+<img src="https://telegra.ph/file/9e831d15da94deb56ef4c.jpg" width="200" height="200"><br>
+<img src="https://badgen.net/badge/Name/Mrk YT/FF33FF?icon=awesome&labelColor=0080FF"></a>
+<img src="https://badgen.net/badge/Skills/😞/purple?icon=terminal&labelColor=red"></a>
+<a href="https://telegram.dog/MRK_yt"><img src="https://img.shields.io/badge/Telegram-Link-blue.svg?logo=telegram"></a>
+<a href="https://github.com/MRK-YT"><img src="https://badgen.net/badge/Follow%20on%20/Github/80FF00?icon=github&labelColor=black"></a>
+<a href="https://youtube.com/channel/UCmGBpXoM-OEm-FacOccVKgQ"><img src="https://img.shields.io/badge/YouTube-Channel-FF3333.svg?logo=youtube&logoColor=FF3333"></a>
+<a href="https://Instagram.com/mrk_yt_"><img src="https://badgen.net/badge/Follow%20on%20/Instagram/80FF00?icon=Instagram&labelColor=black"></a>
+                                                                                                        
+
+[![Open Source? Yes!](https://badgen.net/badge/Oᴘᴇɴ%20Sᴏᴜʀᴄᴇ%20%3F/Yᴇs/yellow?icon=github)](https://github.com/MRK-YT/Pro-Auto-Filter-Bot-V2)
+[![Ask Me Anything !](https://img.shields.io/badge/🤔%20Ask%20Me-Anything-1abc9c.svg)](https://telegram.dog/Mrk_Yt)
+[![Report Bugs!](https://badgen.net/badge/🐞%20Report%20/Bugs/red)](https://telegram.dog/mrk_yt)
+[![Join Channel !](https://badgen.net/badge/🔊%20Join%20/Channel/Black)](https://telegram.dog/mo_Tech_yt)
+
+Join Our [Telegram Group](https://www.telegram.dog/Mo_Tech_Group) For Support/Assistance And Our [Channel](https://www.telegram.dog/Mo_Tech_YT) For Updates.   
+   
+Report Bugs, Give Feature Requests There..   
+Do Fork And Star The Repository If You Liked It.
+</a>
+</p>
+</details>
+
+
+
+
