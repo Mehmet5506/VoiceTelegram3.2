@@ -47,9 +47,9 @@ Click the below button to watch the video tutorial on deploying
 
 <details><summary>GET STRING SESSION FROM REPL RUN</summary>
 <p>
-<br>
+<pre>
 
- [![Run on Repl.it](https://camo.githubusercontent.com/05149b448485553c6f14f6430a45c12dcc79ed3c/68747470733a2f2f7265706c2e69742f62616467652f6769746875622f6a61727669733231303930342f4a6172766973)](https://replit.com/@ZauteKm/GenerateStringSession#main.py)
+[![Run on Repl.it](https://camo.githubusercontent.com/05149b448485553c6f14f6430a45c12dcc79ed3c/68747470733a2f2f7265706c2e69742f62616467652f6769746875622f6a61727669733231303930342f4a6172766973)](https://replit.com/@ZauteKm/GenerateStringSession#main.py)
 </pre>
 </p>
 </details>
@@ -182,6 +182,7 @@ If you donlt like to play in linked channel:
 <p>
 <pre>
 #### Special Credits
+
 - [Rojserbest](http://github.com/rojserbes): Callsmusic Developer
 
 
@@ -204,7 +205,7 @@ Join Our [Telegram Group](https://www.telegram.dog/Mo_Tech_Group) For Support/As
    
 Report Bugs, Give Feature Requests There..   
 Do Fork And Star The Repository If You Liked It.
-</a>
+</pre>
 </p>
 </details>
 
