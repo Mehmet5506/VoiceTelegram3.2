@@ -1,6 +1,6 @@
 {
   "name": "Group Music Bot",
-  "logo": "https://telegra.ph/file/b569577a0593b51cd53ab.png",
+  "logo": "https://telegra.ph/file/e62e75453eeedad35a189.jpg",
   "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
   "repository": "https://github.com/LushaiMusic/GroupMusicBot",
@@ -24,49 +24,49 @@
       "value": ""
     },
     "SUPPORT_GROUP": {
-      "description": "Your MusicPlayer support group without @ [Leave this if you don't have one]",
+      "description": "Your MusicPlayer support group without @ [Leave this if you don't have one](Mo_Tech_Group)",
       "required": false,
-      "value": "tgVCSets"
+      "value": "Mo_Tech_Group"
     },
     "PROJECT_NAME": {
-      "description": "Your MusicPlayer project Name.",
+      "description": "Your MusicPlayer project Name {MT Music Bog V4}.",
       "required": false,
-      "value": "Music Bot v4"
+      "value": "MT Music Bot v4"
     },
     "ASSISTANT_NAME": {
-      "description": "Your MusicPlayer's assistant Username without @.",
+      "description": "Your MusicPlayer's assistant Username without @ {MRK-YT}.",
       "required": true
     },
     "ARQ_API_KEY": {
       "description": "Get from @ARQRobot.",
       "required": false,
-      "value": "GUGFNB-XPUZDX-XGCKTJ-UZXHBZ-ARQ"
+      "value": ""
     },    
     "BG_IMAGE": {
-      "description": "BG image of bot (Use transparent one) [IGNORE].",
+      "description": "BG image of bot @MT_Telegraph_BoT",
       "required": false,
-      "value": " https://telegra.ph/file/e8ef50ce40d228a5fde80.png"
+      "value": "https://telegra.ph/file/e62e75453eeedad35a189.jpg"
     },     
     "UPDATES_CHANNEL": {
-      "description": "Updates Channel without @ [Leave this if you don't have one].",
+      "description": "Updates Channel without @ [Leave this if you don't have one]{Mo_Tech_YT}",
       "required": false,
-      "value": "ZauteKm"
+      "value": "Mo_Tech_YT"
     },    
     "API_ID": {
-      "description": "App ID from my.telegram.org/apps",
+      "description": "App ID from my.telegram.org/apps or @MT_MyTelegramOrg_Bot",
       "required": true
     },
     "PMPERMIT": {
-      "description": "Change to turn off",
+      "description": "Change to turn off {ENABLE}",
       "required": false,
       "value": "ENABLE"
     },    
     "API_HASH": {
-      "description": "App hash from my.telegram.org/apps",
+      "description": "App hash from my.telegram.org/apps or @MT_MyTelegramOrg_Bot",
       "required": true
     },
     "SUDO_USERS": {
-      "description": "List of user IDs counted as admin everywhere (separated by space).",
+      "description": "List of user IDs counted as admin everywhere (separated by space) @MT_SHOWJSON_BOT",
       "required": true
     },
     "DURATION_LIMIT": {
