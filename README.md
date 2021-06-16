@@ -74,11 +74,14 @@ Click the below button to watch the video tutorial on deploying
 <details><summary>Requirements 📝</summary>
 <p>
 <pre>
+
 - FFmpeg
 - NodeJS [nodesource.com](https://nodesource.com/)
 - Python 3.7+
 - [PyTgCalls](https://github.com/pytgcalls/pytgcalls)
-
+</pre>
+</p>
+</details>
  
 <details><summary>Requirements 📝</summary>
 <p>
