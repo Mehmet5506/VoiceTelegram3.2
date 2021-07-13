@@ -95,7 +95,7 @@ def map(pos):
 @Client.on_message(filters.command("help") & ~filters.private & ~filters.channel)
 async def ghelp(_, message: Message):
     await message.reply_text(
-        f"""**🙋‍♀️ Hello there! I can play music in the voice chats of telegram groups & channels.**""",
+        f"""**🙋‍♀️ Hello  I am abhina music bot! I can play music in the voice chats of telegram groups & channels.**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
