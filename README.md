@@ -1,4 +1,4 @@
-Hello sir I am abhina music bot
+𝗛𝗘𝗟𝗟𝗢 𝗦𝗜𝗥 𝗜 𝗔𝗠 𝗔𝗕𝗛𝗜𝗡𝗔𝗦 𝗥𝗢𝗬
 <h1 align="centre">VCsMusicBot v5.0</h1>
 
 ### A bot that can play music on Telegram Group and Channel Voice Chats
@@ -20,12 +20,12 @@ Hello sir I am abhina music bot
 Before clicking on deploy to heroku just click on fork and star just below
 
 <p align="center">
-  <a href="https://github.com/LushaiMusic/VCsMusicBot/fork">
+  <a href="https://github.com/roymusicplay/VCsMusicBot/fork">
     <img src="https://img.shields.io/github/forks/LushaiMusic/VCsMusicBot?label=Fork&style=social">
     
   </a>
-  <a href="https://github.com/LushaiMusic/GroupMusicBot">
-    <img src="https://img.shields.io/github/stars/LushaiMusic/VCsMusicBot?style=social">
+  <a href="https://github.com/roymusicplay/VCsMusicBot">
+    <img src="https://github.com/roymusicplay/VCsMusicBot?style=social">
   </a>
 </p>
 
@@ -47,7 +47,7 @@ Click the below button to watch the video tutorial on deploying
 ### Deploy to VPS 🏃
 ```sh
 # Install Git First (apt-instll git)
-$ git clone https://github.com/LushaiMusic/VCsMusicBot
+$ git clone https://github.com/roymusicplay/VCsMusicBot
 $ cd VCsMusicBot
 # Upgrade sources
 # Install All Requirements 
