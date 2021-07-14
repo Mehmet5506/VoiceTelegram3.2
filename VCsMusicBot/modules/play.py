@@ -1127,7 +1127,7 @@ async def jiosaavn(client: Client, message_: Message):
                     text="Join Updates Channel", url=f"https://t.me/{updateschannel}"
                 )
             ],
-            [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+            [InlineKeyboardButton(text="owner", callback_data="https://t.me/abhinasroy")],
         ]
     )
     file_path = await convert(wget.download(slink))
