@@ -689,7 +689,7 @@ async def play(_, message: Message):
                         InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
                         InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
                     ],
-                    [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+                    [InlineKeyboardButton(text="owner", callback_data="https://t.me/abhinasroy")],
                 ]
             )
             requested_by = message.from_user.first_name
