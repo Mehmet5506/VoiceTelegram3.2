@@ -15,11 +15,11 @@ import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
-@app.on_message(pyrogram.filters.command(["search"]))
+@app.on_message(pyrogram.filters.command(["link"]))
 async def ytsearch(_, message: Message):
     try:
         if len(message.command) < 2:
-            await message.reply_text("/search needs an argument!")
+            await message.reply_text("/aramanın bağımsız değişkene ihtiyacı var!")
             return
         query = message.text.split(None, 1)[1]
         m = await message.reply_text("Searching....")
