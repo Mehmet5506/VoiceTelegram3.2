@@ -14,38 +14,38 @@ def _start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Add me to your Group ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+                        "➕ Beni Grubunuza Ekleyin ➕", url=f"https://t.me/Mp3dinleme_Bot?startgroup=true")],
                 [
                     InlineKeyboardButton(
-                        "👥 Group", url=f"https://t.me/DOSTI_GROUP_1234"), 
+                        "👥 Group", url=f"https://t.me/Sohbetskyfall", 
                     InlineKeyboardButton(
-                        "Owner 📢", url=f"https://t.me/abhinasroy")
+                        "Owner 📢", url=f"https://t.me/MehmetBabaTR"
                 ],[
                     InlineKeyboardButton(
-                        "🔥 Source Code 🔥", url=f"https://{SOURCE_CODE}")
+                        "🔥 Proje Kanalı🔥", url=f"https://t.me/kanalEfsanestar"
                 ]
             ]
         ),
         reply_to_message_id=message.message_id
         )
 
-@Client.on_message(filters.command(["start","start@VCsMusicBot"]) & ~filters.private & ~filters.channel)
+@Client.on_message(filters.command(["start","start@Mp3dinleme_Bot"]) & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
     await message.reply_text(
-        f"""**{PROJECT_NAME} is online.**""",
+        f"""**Müzik botu çevrimiçi.**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "💬 Support Chat", url=f"https://t.me/DOSTI_GROUP_1234"
+                        "💬 Support Chat", url=f"https://t.me/SohbetSkyfall"
                     )
                 ],    
                 [    
                     InlineKeyboardButton(
-                        "🔎 Search YT", switch_inline_query_current_chat=""
+                        "🔎 YT Ara ", switch_inline_query_current_chat=""
                     ),
                     InlineKeyboardButton(
-                        "Close ❌", callback_data="close"
+                        "Kapat ❌", callback_data="close"
                     )
                 ]
             ]
