@@ -122,8 +122,8 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     os.remove("background.png")
 
 
-@Client.on_message(filters.command("playlist") & filters.group & ~filters.edited)
-async def playlist(client, message):
+@Client.on_message(filters.command("oynatlist") & filters.group & ~filters.edited)
+async def oynatlist(client, message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return    
@@ -135,9 +135,9 @@ async def playlist(client, message):
         temp.append(t)
     now_playing = temp[0][0]
     by = temp[0][1].mention(style="md")
-    msg = "**Now Playing** in {}".format(message.chat.title)
+    msg = "**Şimdi Yürütülen** in {}".format(message.chat.title)
     msg += "\n- " + now_playing
-    msg += "\n- Req by " + by
+    msg += "\n- Music botu tarafından" + by
     temp.pop(0)
     if temp:
         msg += "\n\n"
@@ -159,17 +159,17 @@ def updated_stats(chat, queue, vol=100):
         stats = "Settings of **{}**".format(chat.title)
         if len(que) > 0:
             stats += "\n\n"
-            stats += "Volume : {}%\n".format(vol)
-            stats += "Songs in queue : `{}`\n".format(len(que))
-            stats += "Now Playing : **{}**\n".format(queue[0][0])
-            stats += "Requested by : {}".format(queue[0][1].mention)
+            stats += "Ses : {}%\n".format(vol)
+            stats += "Sırada olan şarkılar : `{}`\n".format(len(que))
+            stats += "Şimdi Yürütülen : **{}**\n".format(queue[0][0])
+            stats += "İstenen : {}".format(queue[0][1].mention)
     else:
         stats = None
     return stats
 
 
 def r_ply(type_):
-    if type_ == "play":
+    if type_ == "oynat":
         pass
     else:
         pass
@@ -177,20 +177,20 @@ def r_ply(type_):
         [
             [
                 InlineKeyboardButton("⏹", "leave"),
-                InlineKeyboardButton("⏸", "puse"),
-                InlineKeyboardButton("▶️", "resume"),
-                InlineKeyboardButton("⏭", "skip"),
+                InlineKeyboardButton("⏸", "durdur"),
+                InlineKeyboardButton("▶️", "devam"),
+                InlineKeyboardButton("⏭", "atla"),
             ],
             [
-                InlineKeyboardButton("Playlist 📖", "playlist"),
+                InlineKeyboardButton("Oynatlist 📖", "oynatlist"),
             ],
-            [InlineKeyboardButton("❌ Close", "cls")],
+            [InlineKeyboardButton("❌ Kapat", "cls")],
         ]
     )
     return mar
 
 
-@Client.on_message(filters.command("current") & filters.group & ~filters.edited)
+@Client.on_message(filters.command("bilgi") & filters.group & ~filters.edited)
 async def ee(client, message):
     if message.chat.id in DISABLED_GROUPS:
         return
@@ -266,7 +266,7 @@ async def hfmm(_, message):
         )    
         
 
-@Client.on_callback_query(filters.regex(pattern=r"^(playlist)$"))
+@Client.on_callback_query(filters.regex(pattern=r"^(oynatlist)$"))
 async def p_cb(b, cb):
     global que
     que.get(cb.message.chat.id)
@@ -274,7 +274,7 @@ async def p_cb(b, cb):
     cb.message.chat.id
     cb.message.chat
     cb.message.reply_markup.inline_keyboard[1][0].callback_data
-    if type_ == "playlist":
+    if type_ == "oynatlist":
         queue = que.get(cb.message.chat.id)
         if not queue:
             await cb.message.edit("Player is idle")
@@ -283,7 +283,7 @@ async def p_cb(b, cb):
             temp.append(t)
         now_playing = temp[0][0]
         by = temp[0][1].mention(style="md")
-        msg = "<b>Now Playing</b> in {}".format(cb.message.chat.title)
+        msg = "<b>Şimdi Yürütülen</b> in {}".format(cb.message.chat.title)
         msg += "\n- " + now_playing
         msg += "\n- Req by " + by
         temp.pop(0)
@@ -299,7 +299,7 @@ async def p_cb(b, cb):
 
 
 @Client.on_callback_query(
-    filters.regex(pattern=r"^(play|pause|skip|leave|puse|resume|menu|cls)$")
+    filters.regex(pattern=r"^(oynat|durdur|atla|leave|puse|devam|menu|cls)$")
 )
 @cb_admin_check
 async def m_cb(b, cb):
@@ -317,7 +317,7 @@ async def m_cb(b, cb):
     m_chat = cb.message.chat
 
     the_data = cb.message.reply_markup.inline_keyboard[1][0].callback_data
-    if type_ == "pause":
+    if type_ == "durdur":
         if (chet_id not in callsmusic.active_chats) or (
             callsmusic.active_chats[chet_id] == "paused"
         ):
@@ -329,7 +329,7 @@ async def m_cb(b, cb):
                 updated_stats(m_chat, qeue), reply_markup=r_ply("play")
             )
 
-    elif type_ == "play":
+    elif type_ == "oynat":
         if (chet_id not in callsmusic.active_chats) or (
             callsmusic.active_chats[chet_id] == "playing"
         ):
@@ -341,7 +341,7 @@ async def m_cb(b, cb):
                 updated_stats(m_chat, qeue), reply_markup=r_ply("pause")
             )
 
-    elif type_ == "playlist":
+    elif type_ == "oynatlist":
         queue = que.get(cb.message.chat.id)
         if not queue:
             await cb.message.edit("Player is idle")
@@ -364,7 +364,7 @@ async def m_cb(b, cb):
                 msg += f"\n- Req by {usr}\n"
         await cb.message.edit(msg)
 
-    elif type_ == "resume":
+    elif type_ == "devam":
         if (chet_id not in callsmusic.active_chats) or (
             callsmusic.active_chats[chet_id] == "playing"
         ):
@@ -372,7 +372,7 @@ async def m_cb(b, cb):
         else:
             callsmusic.resume(chet_id)
             await cb.answer("Music Resumed!")
-    elif type_ == "puse":
+    elif type_ == "durdur":
         if (chet_id not in callsmusic.active_chats) or (
             callsmusic.active_chats[chet_id] == "paused"
         ):
@@ -391,18 +391,18 @@ async def m_cb(b, cb):
             [
                 [
                     InlineKeyboardButton("⏹", "leave"),
-                    InlineKeyboardButton("⏸", "puse"),
-                    InlineKeyboardButton("▶️", "resume"),
-                    InlineKeyboardButton("⏭", "skip"),
+                    InlineKeyboardButton("⏸", "durdur"),
+                    InlineKeyboardButton("▶️", "devam"),
+                    InlineKeyboardButton("⏭", "atla"),
                 ],
                 [
-                    InlineKeyboardButton("Playlist 📖", "playlist"),
+                    InlineKeyboardButton("Oynatlist 📖", "oynatlist"),
                 ],
-                [InlineKeyboardButton("❌ Close", "cls")],
+                [InlineKeyboardButton("❌ Kapat", "cls")],
             ]
         )
         await cb.message.edit(stats, reply_markup=marr)
-    elif type_ == "skip":
+    elif type_ == "atla":
         if qeue:
             qeue.pop(0)
         if chet_id not in callsmusic.active_chats:
@@ -435,13 +435,13 @@ async def m_cb(b, cb):
             await cb.answer("Chat is not connected!", show_alert=True)
 
 
-@Client.on_message(command("play") & other_filters)
-async def play(_, message: Message):
+@Client.on_message(command("oynat") & other_filters)
+async def oynat(_, message: Message):
     global que
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message.reply("🔄 <b>Processing</b>")
+    lel = await message.reply("🔄 <b>Lütfen bekleyiniz.</b>")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -532,10 +532,10 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
+                    InlineKeyboardButton("📖 Oynatlist", callback_data="oynatlist"),
                     InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
                 ],
-                [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+                [InlineKeyboardButton(text="❌ Kapat", callback_data="cls")],
             ]
         )
         file_name = get_file_name(audio)
@@ -553,7 +553,7 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("🎵 <b>Processing</b>")
+        await lel.edit("🎵 <b>Lütfen Bekleyiniz.</b>")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -589,14 +589,14 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
+                    InlineKeyboardButton("📖 Oynatlist", callback_data="Oynatlist"),
                     InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
                 ],
                 [
                     InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
                     InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
                 ],
-                [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+                [InlineKeyboardButton(text="❌ Kapat", callback_data="cls")],
             ]
         )
         requested_by = message.from_user.first_name
@@ -607,16 +607,16 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += " " + str(i)
         print(query)
-        await lel.edit("🎵 **Processing**")
+        await lel.edit("🎵 **Lütfen bekleyiniz.**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         
         try:
           results = YoutubeSearch(query, max_results=5).to_dict()
         except:
-          await lel.edit("Give me something to play")
+          await lel.edit("Bana oynayacak bir şey ver.")
         # Looks like hell. Aren't it?? FUCK OFF
         try:
-            toxxt = "**Select the song you want to play**\n\n"
+            toxxt = "**Çalmak istediğiniz şarkıyı seçin**\n\n"
             j = 0
             useer=user_name
             emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣",]
@@ -682,14 +682,14 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
+                        InlineKeyboardButton("📖 Oynatlist", callback_data="oynatlist"),
                         InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
                     ],
                     [
                         InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
                         InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
                     ],
-                    [InlineKeyboardButton(text="owner", callback_data="https://t.me/abhinasroy")],
+                    [InlineKeyboardButton(text="owner", callback_data="https://t.me/MehmetBabaTR")],
                 ]
             )
             requested_by = message.from_user.first_name
@@ -741,7 +741,7 @@ async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("🔄 <b>Processing</b>")
+    lel = await message.reply("🔄 <b>Lütfen bekleyiniz.</b>")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -840,14 +840,14 @@ async def ytplay(_, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
+                InlineKeyboardButton("📖 Oynatlist", callback_data="oynat eeelist"),
                 InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
             ],
             [
                 InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
                 InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
             ],
-            [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+            [InlineKeyboardButton(text="❌ Kapat", callback_data="cls")],
         ]
     )
     requested_by = message.from_user.first_name
@@ -898,7 +898,7 @@ async def deezer(client: Client, message_: Message):
     if message_.chat.id in DISABLED_GROUPS:
         return
     global que
-    lel = await message_.reply("🔄 <b>Processing</b>")
+    lel = await message_.reply("🔄 <b>Lütfen bekleyib</b>")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
@@ -983,11 +983,11 @@ async def deezer(client: Client, message_: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
+                InlineKeyboardButton("📖 Oynatlist", callback_data="oynatlist"),
                 InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
             ],
             [InlineKeyboardButton(text="Listen On Deezer 🎬", url=f"{url}")],
-            [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+            [InlineKeyboardButton(text="❌ Kapat ", callback_data="cls")],
         ]
     )
     file_path = await convert(wget.download(url))
