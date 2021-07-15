@@ -1,15 +1,15 @@
 import os
 from VCsMusicBot.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL
 class Messages():
-      START_MSG = "**Merhaba ben Mehmet_Bey müzik botu👋 [{}](tg://user?id={})!**\n\n🤖 Telegram Groups'un sesli sohbetlerinde müzik çalmak için oluşturulan Mwhmet_Bey tarafından düzenlenen müzik gelişmiş botuyum.\n\n✅ Daha fazla bilgi için/help."
+      START_MSG = "**Merhaba ben  müzik botu👋 [{}](tg://user?id={})!**\n\n🤖 Telegram Groups'un sesli sohbetlerinde müzik çalmak için oluşturulan Mehmet_Bey tarafından düzenlenen müzik gelişmiş botuyum.\n\n✅ Daha fazla bilgi için/help."
       HELP_MSG = [
         ".",
 f"""
-**Merhaba ben Mehmet_Bey müzik botu, Hoşgeldiniz {Abelia_Musicbot}
+**Merhaba ben Mehmet_Bey müzik botu, Hoşgeldiniz Abelia_Musicbot
 
 ⭕ Grubunuzun sesli sohbetinde ve kanal sesli sohbetlerinde müzik çalabilirim.
 
-⭕ Assistant: @{Sesmusicasistan}\n\nİleri'yi tıklatın ➡️ yönergeler için.**
+⭕ Assistant: @Sesmusicasistan\n\nİleri'yi tıklatın ➡️ yönergeler için.**
 """,
 
 f"""
