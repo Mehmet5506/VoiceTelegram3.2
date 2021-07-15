@@ -53,7 +53,7 @@ f"""
 
 **⭕ Yalnızca bağlı grup yöneticileri için:**
 
-- /cplay <song name>: Play song you requested.
+- /cplay <song name>: İstediğiniz şarkıyı çal.
 - /cdplay <song name>: Play song you requested via deezer.
 - /csplay <song name>: Play song you requested via jio saavn.
 - /cplaylist: Show now playing list.
@@ -65,15 +65,15 @@ f"""
 - /cend: Stop music play.
 - /userbotjoinchannel: Invite assistant to your chat.
 
-**Channel is also can be used instead of c** ( /cplay = /channelplay )
+**Kanal c yerine de kullanılabilir** ( /cplay = /channelplay )
 
-**⭕ If you donlt like to play in linked group:**
+**⭕ Bağlantılı grupta oynamayı sevmiyorsanız:**
 
-1) Get your channel ID.
-2) Create a group with tittle: Channel Music: your_channel_id
-3) Add bot as Channel admin with full perms
-4) Add @{ASSISTANT_NAME} to the channel as an admin.
-5) Simply send commands in your group.
+1) Kanal kimliğinizi alın.
+2) Küçük bir grup oluşturma: Kanal Müziği: your_channel_id
+3) Tam perms ile Kanal yöneticisi olarak bot ekleme
+4) Add @{sesmusicasistan} yönetici olarak kanala.
+5) Grubunuza komut göndermeniz yeterlidir.
 """,
 
 f"""
@@ -90,16 +90,16 @@ f"""
 - /saavn [song name]: Download song from saavn
 - /deezer [song name]: Download song from deezer
 
-**=>> Search Tools 🔍**
+**=>> Arama Araçları 🔍**
 - /link [song name]: Search youtube for songs
 - /lyrics [song name]: Get song lyrics
 """,
 
 f"""
-**=>> Commands for Sudo Users 👮**
- - /userbotleaveall - remove assistant from all chats
- - /broadcast <reply to message> - globally brodcast replied message to all chats
- - /pmpermit [on/off] - enable/disable pmpermit message
-**Sudo Users can execute any command in any groups.**
+**=>> Sudo Kullanıcıları için Komutlar 👮**
+ - /userbotleaveall - yardımcıyı tüm sohbetlerden kaldırma
+ - /broadcast <reply to message> - tüm sohbetlere genel olarak yayınlanan yanıtlanmış mesaj
+ - /pmpermit [on/off] - pmpermit iletisini etkinleştirme/devre dışı bırakma
+**Sudo Kullanıcıları herhangi bir gruptaki herhangi bir komutu yürütebilir.**
 """
       ]
