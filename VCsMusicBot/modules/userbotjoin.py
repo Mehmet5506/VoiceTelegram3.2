@@ -5,7 +5,7 @@ from VCsMusicBot.helpers.decorators import authorized_users_only, errors
 from VCsMusicBot.services.callsmusic.callsmusic import client as USER
 from VCsMusicBot.config import SUDO_USERS
 
-@Client.on_message(filters.command(["userbotjoin"]) & ~filters.private & ~filters.bot)
+@Client.on_message(filters.command(["katil"]) & ~filters.private & ~filters.bot)
 @authorized_users_only
 @errors
 async def addchannel(client, message):
@@ -14,18 +14,18 @@ async def addchannel(client, message):
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "<b>Add me as admin of yor group first</b>",
+            "<b>Önce beni grubunun yöneticisi olarak ekle</b>",
         )
         return
 
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "MusicBot"
+        user.first_name = "@Mp3dinleme_Bot"
 
     try:
         await USER.join_chat(invitelink)
-        await USER.send_message(message.chat.id, "I joined here as you requested")
+        await USER.send_message(message.chat.id, "İstediğiniz gibi buraya katıldım")
     except UserAlreadyParticipant:
         await message.reply_text(
             "<b>helper already in your chat</b>",
@@ -42,7 +42,7 @@ async def addchannel(client, message):
     )
 
 
-@USER.on_message(filters.group & filters.command(["userbotleave"]))
+@USER.on_message(filters.group & filters.command(["ayril"]))
 @authorized_users_only
 async def rem(USER, message):
     try:
@@ -50,7 +50,7 @@ async def rem(USER, message):
     except:
         await message.reply_text(
             f"<b>User couldn't leave your group! May be floodwaits."
-            "\n\nOr manually kick me from to your Group</b>",
+            "\n\nYa da beni manuel olarak grubunuza tekmelersiniz.</b>",
         )
         return
     
