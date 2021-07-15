@@ -31,11 +31,11 @@ async def bye(client: Client, message: Message):
         queryy = text[1]
         if queryy == "on":
             PMSET = True
-            await message.reply_text("Pmpermit turned on")
+            await message.reply_text("Pmpermit açık")
             return
         if queryy == "off":
             PMSET = None
-            await message.reply_text("Pmpermit turned off")
+            await message.reply_text("Pmpermit kapalı")
             return
 
 @USER.on_message(filters.text & filters.private & filters.me)        
@@ -43,7 +43,7 @@ async def autopmPermiat(client: USER, message: Message):
     chat_id = message.chat.id
     if not chat_id in pchats:
         pchats.append(chat_id)
-        await message.reply_text("Approoved to PM due to outgoing messages")
+        await message.reply_text("Giden iletiler nedeniyle PM'ye yakın")
         return
     message.continue_propagation()    
     
@@ -52,7 +52,7 @@ async def pmPermiat(client: USER, message: Message):
     chat_id = message.chat.id
     if not chat_id in pchats:
         pchats.append(chat_id)
-        await message.reply_text("Approoved to PM")
+        await message.reply_text("PM'ye tahsis edildi")
         return
     message.continue_propagation()    
     
@@ -62,6 +62,6 @@ async def rmpmPermiat(client: USER, message: Message):
     chat_id = message.chat.id
     if chat_id in pchats:
         pchats.remove(chat_id)
-        await message.reply_text("Dispprooved to PM")
+        await message.reply_text("PM'ye karşı orantısız")
         return
     message.continue_propagation()
