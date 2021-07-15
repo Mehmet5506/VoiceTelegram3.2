@@ -1,57 +1,57 @@
 import os
 from VCsMusicBot.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL
 class Messages():
-      START_MSG = "**Hello i am abhinas music bot👋 [{}](tg://user?id={})!**\n\n🤖 I am abhinas music advanced bot created for playing music in the voice chats of Telegram Groups & Channels.\n\n✅ Hits /help for more info."
+      START_MSG = "**Merhaba ben Mehmet_Bey müzik botu👋 [{}](tg://user?id={})!**\n\n🤖 Telegram Groups'un sesli sohbetlerinde müzik çalmak için oluşturulan Mwhmet_Bey tarafından düzenlenen müzik gelişmiş botuyum.\n\n✅ Daha fazla bilgi için/help."
       HELP_MSG = [
         ".",
 f"""
-**Hello I am abhinas music bot, Welcome to {PROJECT_NAME}
+**Merhaba ben Mehmet_Bey müzik botu, Hoşgeldiniz {Abelia_Musicbot}
 
-⭕ I can play music in your group's voice chat as well as channel voice chats.
+⭕ Grubunuzun sesli sohbetinde ve kanal sesli sohbetlerinde müzik çalabilirim.
 
-⭕ Assistant: @{ASSISTANT_NAME}\n\nClick Next ➡️ for instructions.**
+⭕ Assistant: @{Sesmusicasistan}\n\nİleri'yi tıklatın ➡️ yönergeler için.**
 """,
 
 f"""
-**Setting up**
+**Ayarlama**
 
-1) Make bot admin (Group and in channel if use cplay)
-2) Start a voice chat
-3) Try /play <song name> for the first time by an admin
- If userbot joined enjoy music, If not add @{ASSISTANT_NAME} to your group and retry.
+1) Bot yöneticisi yap (Cplay kullanıyorsanız grupla ve kanalda)
+2) Sesli sohbet başlatma
+3) Deneyin /oynat <şarkı ismi> ilk kez bir yönetici tarafından
+ Userbot katıldıysa müziğin tadını çıkarın, Eklemezse @{sesmusicasistan} grubunuza ve yeniden deneyin.
 
-**For Channel Music Play**
-1) Make me admin of your channel.
-2) Send /userbotjoinchannel in linked group.
-3) Now send commands in linked group.
+**Kanal Müziği Çalma İçin**
+1) Beni kanalınızın yöneticisi yap.
+2) Gönder /bağlantılı grupta userbotjoinchannel.
+3) Şimdi bağlantılı grupta komut gönder.
 
-**Commands**
+**Komut**
 
-**=>> Song Playing 🎧**
+**=>> Şarkı Çalma 🎧**
 
-- /play <song name>: Select the Given Below Keyboard.
-- /play <yt url>: Play the given YouTube URL.
-- /ytplay: Directly play song via YouTube Music.
-- /dplay: Play song via deezer.
-- /splay: Play song via jio saavn.
+- /oynat <şarkı ismi>: Aşağıda Verilen Klavyeyi Seçin.
+- /oynat <yt url>: Verilen YouTube URL'sini oynatma.
+- /ytplay: YouTube Music üzerinden doğrudan şarkı çalma.
+- /dplay: Deezer ile şarkı çal.
+- /splay: Jio saavn ile şarkı çal.
 
-**=>> Playback ⏯**
+**=>> kayıttan yürütme ⏯**
 
-- /player: Open Settings menu of player.
-- /skip: Skips the current track.
-- /pause: Pause track.
-- /resume: Resumes the paused track.
-- /end: Stops media playback.
-- /current: Shows the current Playing track.
-- /playlist: Shows playlist.
+- /player: Oynatıcının Ayarlar menüsünü aç.
+- /atla: Geçerli parçayı atlar.
+- /durdur: parçayı duraklat.
+- /devam: Duraklatılmış parçayı devam ettiriyor.
+- /kapat: Medya kayıttan yürütmeyi durdurur.
+- /bilgi: Geçerli Çalma parçasını gösterir.
+- /oynatlist: Çalma listesini gösterir.
 
-**Player cmd and all other cmds except /play, /current  and /playlist  are only for admins of the group.**
+**Player cmd ve diğer tüm cmd'ler /oynat, /geçerli ve /çalma listesi yalnızca grup yöneticileri içindir.**
 """,
         
 f"""
-**=>> Channel Music Play 👨‍🎤**
+**=>> Kanal Müziği Çalma 👨‍🎤**
 
-**⭕ For linked group admins only:**
+**⭕ Yalnızca bağlı grup yöneticileri için:**
 
 - /cplay <song name>: Play song you requested.
 - /cdplay <song name>: Play song you requested via deezer.
@@ -77,21 +77,21 @@ f"""
 """,
 
 f"""
-**=>> More tools 😬**
+**=>> Diğer araçlar 😬**
 
-- /musicplayer <on/off> : Enable/Disable Music player
-- /reload: Updates admin info of your group. Try if bot isn't recognize admin
-- /userbotjoin: Invite @{ASSISTANT_NAME} Userbot to your chat
+- /musicplayer <on/off> : Müzik Çaları Etkinleştir/Devre Dışı Bırak
+- /reload: Grubunuzun yönetici bilgilerini güncelleştirin. Bot yöneticiyi tanımıyorsa deneyin
+- /userbotjoin: Invite @{sesmusicasistan} Sohbetinize userbot
 """,
 f"""
-**=>> Song/Vid Download 📥**
+**=>> Şarkı/Vid İndir:📥**
 - /video [song mame]: Download video song from youtube
-- /song [song name]: Download audio song from youtube
+- /bul [song name]: Download audio song from youtube
 - /saavn [song name]: Download song from saavn
 - /deezer [song name]: Download song from deezer
 
 **=>> Search Tools 🔍**
-- /search [song name]: Search youtube for songs
+- /link [song name]: Search youtube for songs
 - /lyrics [song name]: Get song lyrics
 """,
 
