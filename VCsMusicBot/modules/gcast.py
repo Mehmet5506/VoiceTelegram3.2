@@ -17,9 +17,9 @@ async def broadcast(_, message: Message):
     if message.from_user.id not in SUDO_USERS:
         return
     else:
-        wtf = await message.reply("`Starting a broadcast...`")
+        wtf = await message.reply("`Yayın başlatma...`")
         if not message.reply_to_message:
-            await wtf.edit("Please Reply to a Message to broadcast!")
+            await wtf.edit("Lütfen Yayın İletisini Yanıtla!")
             return
         lmao = message.reply_to_message.text
         async for dialog in USER.iter_dialogs():
@@ -33,4 +33,4 @@ async def broadcast(_, message: Message):
                 #await wtf.edit(f"`broadcasting...` \n\n**Sent to:** `{sent}` Chats \n**Failed in:** {failed} Chats")
                 
             
-        await message.reply_text(f"`Broadcast Finished ` \n\n**Sent to:** `{sent}` Chats \n**Failed in:** {failed} Chats")
+        await message.reply_text(f"`Yayın Tamamlandı` \n\n**Sent to:** `{sent}` Chats \n**Failed in:** {failed} Chats")
