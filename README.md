@@ -1,7 +1,7 @@
 𝗛𝗘𝗟𝗟𝗢 𝗦𝗜𝗥 𝗜 𝗔𝗠 𝗔𝗕𝗛𝗜𝗡𝗔𝗦 𝗥𝗢𝗬
 <h1 align="centre">VCsMusicBot v5.0</h1>
 
-### A bot that can play music on Telegram Group and Channel Voice Chats
+### Telegram Group ve Channel Voice Chats'te müzik çalabilen bir bot
 
 <p align="center">
   <a href="">
@@ -12,7 +12,7 @@
 <p align="center">
   <a href="https://telegra.ph/file/59a5c9e150cabe909446f.jpg">
      <img height="200px" src="https://telegra.ph/file/59a5c9e150cabe909446f.jpg">
-  </a>
+  </a>3&
 </p>
 
 ## Give your 💙
