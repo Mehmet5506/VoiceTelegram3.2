@@ -18,7 +18,7 @@ f"""
 1) Bot yöneticisi yap (Cplay kullanıyorsanız grupla ve kanalda)
 2) Sesli sohbet başlatma
 3) Deneyin /oynat <şarkı ismi> ilk kez bir yönetici tarafından
- Userbot katıldıysa müziğin tadını çıkarın, Eklemezse @{sesmusicasistan} grubunuza ve yeniden deneyin.
+ Userbot katıldıysa müziğin tadını çıkarın, Eklenmezse @sesmusicasistan grubunuza ve yeniden deneyin.
 
 **Kanal Müziği Çalma İçin**
 1) Beni kanalınızın yöneticisi yap.
