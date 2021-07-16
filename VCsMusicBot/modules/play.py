@@ -285,7 +285,7 @@ async def p_cb(b, cb):
         by = temp[0][1].mention(style="md")
         msg = "<b>Şimdi Yürütülen</b> in {}".format(cb.message.chat.title)
         msg += "\n- " + now_playing
-        msg += "\n- Req tarafından" + by
+        msg += "\n- Siz tarafından" + by
         temp.pop(0)
         if temp:
             msg += "\n\n"
@@ -352,7 +352,7 @@ async def m_cb(b, cb):
         by = temp[0][1].mention(style="md")
         msg = "**Şimdi Oynuyor** in {}".format(cb.message.chat.title)
         msg += "\n- " + now_playing
-        msg += "\n- tarafından" + by
+        msg += "\n- Siz tarafından" + by
         temp.pop(0)
         if temp:
             msg += "\n\n"
@@ -411,7 +411,7 @@ async def m_cb(b, cb):
             queues.task_done(chet_id)
             if queues.is_empty(chet_id):
                 callsmusic.stop(chet_id)
-                await cb.message.edit("- No More Playlist..\n- Leaving VC!")
+                await cb.message.edit("- Artık Çalma Listesi Yok..\n- Leaving VC!")
             else:
                 await callsmusic.set_stream(
                     chet_id, queues.get(chet_id)["file"]
@@ -622,10 +622,10 @@ async def oynat(_, message: Message):
             emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣",]
 
             while j < 5:
-                toxxt += f"{emojilist[j]} <b>Başlık - [{results[j]['başlık']}](https://youtube.com{results[j]['url_suffix']})</b>\n"
-                toxxt += f" ╚ <b>Süre</b> - {results[j]['süre']}\n"
-                toxxt += f" ╚ <b>Görünümler</b> - {results[j]['görünümler']}\n"
-                toxxt += f" ╚ <b>Kanal</b> - {results[j]['kanal']}\n\n"
+                toxxt += f"{emojilist[j]} <b>Title - [{results[j]['title']}](https://youtube.com{results[j]['url_suffix']})</b>\n"
+                toxxt += f" ╚ <b>Duration</b> - {results[j]['duration']}\n"
+                toxxt += f" ╚ <b>Views</b> - {results[j]['views']}\n"
+                toxxt += f" ╚ <b>Channel</b> - {results[j]['Channel']}\n\n"
 
                 j += 1            
             koyboard = InlineKeyboardMarkup(
@@ -970,12 +970,12 @@ async def deezer(client: Client, message_: Message):
         thumbnail = "https://telegra.ph/file/cf19dda907391656338eb.png"
 
     except:
-        await res.edit("Found Literally Nothing, You Should Work On Your English!")
+        await res.edit("Kelimenin Tam Anlamıyla Hiçbir Şey Bulunamadı, İngilizceniz üzerinde çalışmalısınız!")
         return
     try:    
         duuration= round(duration / 60)
         if duuration > DURATION_LIMIT:
-            await cb.message.edit(f"Music longer than {DURATION_LIMIT}min are not allowed to play")
+            await cb.message.edit(f"Daha uzun müzik {DURATION_LIMIT}min'in oynamasına izin verilmez")
             return
     except:
         pass    
@@ -1017,7 +1017,7 @@ async def deezer(client: Client, message_: Message):
         try:
             await callsmusic.set_stream(chat_id, file_path)
         except:
-            res.edit("Group call is not connected of I can't join it")
+            res.edit("Grup araması bağlı değil Katılamıyorum")
             return
 
     await res.delete()
