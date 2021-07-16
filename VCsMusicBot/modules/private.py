@@ -17,12 +17,12 @@ def _start(client, message):
                         "➕ Beni Grubunuza Ekleyin ➕", url=f"https://t.me/Mp3dinleme_Bot?startgroup=true")],
                 [
                     InlineKeyboardButton(
-                        "👥 Group", url=f"https://t.me/Sohbetskyfall", 
+                        "👥 Group", url=f"https://t.me/Sohbetskyfall"), 
                     InlineKeyboardButton(
-                        "Owner 📢", url=f"https://t.me/MehmetBabaTR"
+                        "Owner 📢", url=f"https://t.me/MehmetBabaTR"), 
                 ],[
                     InlineKeyboardButton(
-                        "🔥 Proje Kanalı🔥", url=f"https://t.me/kanalEfsanestar"
+                        "🔥 Proje Kanalı🔥", url=f"https://t.me/kanalEfsanestar"), 
                 ]
             ]
         ),
