@@ -22,7 +22,7 @@ from VCsMusicBot.config import DURATION_LIMIT
 from VCsMusicBot.modules.play import arq
 
 
-@Client.on_message(filters.command("bul") & ~filters.channel)
+@Client.on_message(filters.command("indir") & ~filters.channel)
 def song(client, message):
 
     user_id = message.from_user.id
@@ -251,11 +251,11 @@ def time_to_seconds(time):
 async def jssong(_, message):
     global is_downloading
     if len(message.command) < 2:
-        await message.reply_text("/saavn requires an argument.")
+        await message.reply_text("/saavn bağımsız değişken gerektirir.")
         return
     if is_downloading:
         await message.reply_text(
-            "Another download is in progress, try again after sometime."
+            "Başka bir indirme devam ediyor, bir süre sonra yeniden deneyin."
         )
         return
     is_downloading = True
@@ -290,7 +290,7 @@ async def jssong(_, message):
 async def deezsong(_, message):
     global is_downloading
     if len(message.command) < 2:
-        await message.reply_text("/deezer requires an argument.")
+        await message.reply_text("/deezer bir bağımsız değişken gerektirir.")
         return
     if is_downloading:
         await message.reply_text(
@@ -300,7 +300,7 @@ async def deezsong(_, message):
     is_downloading = True
     text = message.text.split(None, 1)[1]
     query = text.replace(" ", "%20")
-    m = await message.reply_text("Searching...")
+    m = await message.reply_text("Aranıyor...")
     try:
         songs = await arq.deezer(query, 1)
         if not songs.ok:
