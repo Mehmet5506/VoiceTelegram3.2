@@ -103,12 +103,12 @@ def map(pos):
 @Client.on_message(filters.command(["help","help@VCsMusicBot"]) & ~filters.private & ~filters.channel)
 async def ghelp(_, message: Message):
     await message.reply_text(
-        f"""**Hello sir !i am abhinas music bot! I can play music in the voice chats of telegram groups & channels.**""",
+        f"""**Merhaba efendim. !ben MehmetBey için yapılmış müzik botu! Telgraf gruplarının ve kanallarının sesli sohbetlerinde müzik çalabilirim.**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Click here for help", url=f"https://t.me/{BOT_USERNAME}?start"
+                        "Yardım için tıklayınız", url=f"https://t.me/sohbetlobisi?start"
                     )
                 ]
             ]
