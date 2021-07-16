@@ -224,7 +224,7 @@ async def settings(client, message):
 
 
 @Client.on_message(
-    filters.command("müzik") & ~filters.edited & ~filters.bot & ~filters.private
+    filters.command("durum") & ~filters.edited & ~filters.bot & ~filters.private
 )
 @authorized_users_only
 async def hfmm(_, message):
@@ -299,7 +299,7 @@ async def p_cb(b, cb):
 
 
 @Client.on_callback_query(
-    filters.regex(pattern=r"^(oynat|durdur|atla|leave|puse|devam|menü|kapat)$")
+    filters.regex(pattern=r"^(oynat|durdur|atla|leave|puse|devam|menu|cls)$")
 )
 @cb_admin_check
 async def m_cb(b, cb):
@@ -380,11 +380,11 @@ async def m_cb(b, cb):
         else:
             callsmusic.pause(chet_id)
             await cb.answer("Müzik Duraklatıldı!")
-    elif type_ == "kapat":
+    elif type_ == "cls":
         await cb.answer("Kapalı menü")
         await cb.message.delete()
 
-    elif type_ == "menü":
+    elif type_ == "menu":
         stats = updated_stats(cb.message.chat, qeue)
         await cb.answer("Menü açıldı")
         marr = InlineKeyboardMarkup(
