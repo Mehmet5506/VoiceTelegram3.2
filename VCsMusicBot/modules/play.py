@@ -728,7 +728,7 @@ async def oynat(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ <b>Playing</b> here the song requested by {} via YouTube Music".format(
+            caption="▶️ <b>Oynatıyor</b> burada istenen şarkı {} YouTube müzik tarafından".format(
                 message.from_user.mention()
             ),
         )
@@ -736,8 +736,8 @@ async def oynat(_, message: Message):
         return await lel.delete()
 
 
-@Client.on_message(filters.command("ytplay") & filters.group & ~filters.edited)
-async def ytplay(_, message: Message):
+@Client.on_message(filters.command("ytoynat") & filters.group & ~filters.edited)
+async def ytoynat(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return
@@ -759,14 +759,14 @@ async def ytplay(_, message: Message):
             if administrator == message.from_user.id:
                 if message.chat.title.startswith("Channel Music: "):
                     await lel.edit(
-                        "<b>Remember to add helper to your channel</b>",
+                        "<b>Kanalınıza yardımcı eklemeyi unutmayın</b>",
                     )
                     pass
                 try:
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "<b>Add me as admin of yor group first</b>",
+                        "<b>Önce beni yor grubunun yöneticisi olarak ekle</b>",
                     )
                     return
 
@@ -776,7 +776,7 @@ async def ytplay(_, message: Message):
                         message.chat.id, "I joined this group for playing music in VC"
                     )
                     await lel.edit(
-                        "<b>helper userbot joined your chat</b>",
+                        "<b>yardımcı userbot sohbetinize katıldı</b>",
                     )
 
                 except UserAlreadyParticipant:
@@ -795,7 +795,7 @@ async def ytplay(_, message: Message):
             f"<i> {user.first_name} Userbot not in this chat, Ask admin to send /play command for first time or add {user.first_name} manually</i>"
         )
         return
-    await lel.edit("🔎 <b>Finding</b>")
+    await lel.edit("🔎 <b>İşleme alındı</b>")
     user_id = message.from_user.id
     user_name = message.from_user.first_name
      
@@ -886,7 +886,7 @@ async def ytplay(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ <b>Playing</b> here the song requested by {} via YouTube Music".format(
+            caption="▶️ <b>Oynatılıyor</b> here the song requested by {} via YouTube Music".format(
                 message.from_user.mention()
             ),
         )
@@ -904,7 +904,7 @@ async def deezer(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "VCsMusicBot"
+        user.first_name = "Mp3dinlemeBot"
     usar = user
     wew = usar.id
     try:
@@ -1003,9 +1003,9 @@ async def deezer(client: Client, message_: Message):
         loc = file_path
         appendable = [s_name, r_by, loc]
         qeue.append(appendable)
-        await res.edit_text(f"✯{bn}✯= #️⃣ Queued at position {position}")
+        await res.edit_text(f"✯{bn}✯= #️⃣ Konumda sıraya alındı {position}")
     else:
-        await res.edit_text(f"✯{bn}✯=▶️ Playing.....")
+        await res.edit_text(f"✯{bn}✯=▶️ Oynatılıyor.....")
 
         que[chat_id] = []
         qeue = que.get(chat_id)
