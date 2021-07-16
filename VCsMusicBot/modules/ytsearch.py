@@ -15,7 +15,7 @@ import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
-@app.on_message(pyrogram.filters.command(["link"]))
+@app.on_message(pyrogram.filters.command(["indir"]))
 async def ytsearch(_, message: Message):
     try:
         if len(message.command) < 2:
