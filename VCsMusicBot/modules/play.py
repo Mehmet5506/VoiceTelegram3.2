@@ -285,11 +285,11 @@ async def p_cb(b, cb):
         by = temp[0][1].mention(style="md")
         msg = "<b>Şimdi Yürütülen</b> in {}".format(cb.message.chat.title)
         msg += "\n- " + now_playing
-        msg += "\n- Req by " + by
+        msg += "\n- Req tarafından" + by
         temp.pop(0)
         if temp:
             msg += "\n\n"
-            msg += "**Queue**"
+            msg += "**sıra**"
             for song in temp:
                 name = song[0]
                 usr = song[1].mention(style="md")
@@ -350,13 +350,13 @@ async def m_cb(b, cb):
             temp.append(t)
         now_playing = temp[0][0]
         by = temp[0][1].mention(style="md")
-        msg = "**Now Playing** in {}".format(cb.message.chat.title)
+        msg = "**Şimdi Oynuyor** in {}".format(cb.message.chat.title)
         msg += "\n- " + now_playing
-        msg += "\n- Req by " + by
+        msg += "\n- tarafından" + by
         temp.pop(0)
         if temp:
             msg += "\n\n"
-            msg += "**Queue**"
+            msg += "**sıra**"
             for song in temp:
                 name = song[0]
                 usr = song[1].mention(style="md")
@@ -376,7 +376,7 @@ async def m_cb(b, cb):
         if (chet_id not in callsmusic.active_chats) or (
             callsmusic.active_chats[chet_id] == "paused"
         ):
-            await cb.answer("Chat is not connected or already paused", show_alert=True)
+            await cb.answer("Sohbet bağlı değil veya zaten duraklatıldı", show_alert=True)
         else:
             callsmusic.pause(chet_id)
             await cb.answer("Müzik Duraklatıldı!")
@@ -416,10 +416,10 @@ async def m_cb(b, cb):
                 await callsmusic.set_stream(
                     chet_id, queues.get(chet_id)["file"]
                 )
-                await cb.answer.reply_text("✅ <b>Skipped</b>")
+                await cb.answer.reply_text("✅ <b>Geçildi</b>")
                 await cb.message.edit((m_chat, qeue), reply_markup=r_ply(the_data))
                 await cb.message.reply_text(
-                    f"- Skipped track\n- Now Playing **{qeue[0][0]}**"
+                    f"- Atlanan parça\n- Şimdi Yürütülen **{qeue[0][0]}**"
                 )
 
     else:
@@ -484,15 +484,15 @@ async def oynat(_, message: Message):
                 except Exception:
                     # print(e)
                     await lel.edit(
-                        f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add assistant to your Group and try again</b>",
+                        f"<b>🔴 Taşan Bekleme Hatası 🔴 \nUser {user.first_name} userbot için yoğun istekler nedeniyle grubunuza katılamadı! Kullanıcının grupta yasaklı olmadığından emin olun."
+                        "\n\nVeya Grubunuza el ile asistan ekleyin ve yeniden deneyin</b>",
                     )
     try:
         await USER.get_chat(chid)
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i> {user.first_name} Userbot not in this chat, Ask admin to send /play command for first time or add {user.first_name} manually</i>"
+            f"<i> {user.first_name} Userbot bu sohbette yok, Yöneticiden göndermesini iste /oynat ilk kez çal veya ekle {user.first_name} manually</i>"
         )
         return
     text_links=None
@@ -526,7 +526,7 @@ async def oynat(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             await lel.edit(
-                f"❌ Videos longer than {DURATION_LIMIT} minute(s) aren't allowed to play!"
+                f"❌ Daha uzun videolar {DURATION_LIMIT} minute(s) aren't allowed to play!"
             )
             return
         keyboard = InlineKeyboardMarkup(
@@ -570,7 +570,7 @@ async def oynat(_, message: Message):
 
         except Exception as e:
             await lel.edit(
-                "Song not found.Try another song or maybe spell it properly."
+                "Şarkı bulunamadı. Başka bir şarkı deneyin veya belki düzgün heceleyin."
             )
             print(str(e))
             return
@@ -622,10 +622,10 @@ async def oynat(_, message: Message):
             emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣",]
 
             while j < 5:
-                toxxt += f"{emojilist[j]} <b>Title - [{results[j]['başlık']}](https://youtube.com{results[j]['url_suffix']})</b>\n"
-                toxxt += f" ╚ <b>Duration</b> - {results[j]['süre']}\n"
-                toxxt += f" ╚ <b>Views</b> - {results[j]['Görünümler']}\n"
-                toxxt += f" ╚ <b>Channel</b> - {results[j]['kanal']}\n\n"
+                toxxt += f"{emojilist[j]} <b>Başlık - [{results[j]['başlık']}](https://youtube.com{results[j]['url_suffix']})</b>\n"
+                toxxt += f" ╚ <b>Süre</b> - {results[j]['süre']}\n"
+                toxxt += f" ╚ <b>Görünümler</b> - {results[j]['görünümler']}\n"
+                toxxt += f" ╚ <b>Kanal</b> - {results[j]['kanal']}\n\n"
 
                 j += 1            
             koyboard = InlineKeyboardMarkup(
@@ -647,7 +647,7 @@ async def oynat(_, message: Message):
             return
             # Returning to pornhub
         except:
-            await lel.edit("Seçmek için yeterli sonuç yok.. Doğrudan oyun başlatılıyor..")
+            await lel.edit("Seçmek için yeterli sonuç yok.. Doğrudan Müziği başlatılıyorum..")
                         
             # print(results)
             try:
@@ -706,7 +706,7 @@ async def oynat(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption=f"#⃣ Your requested song <b>queued</b> at position {position}!",
+            caption=f"#⃣ İstediğiniz şarkı<b>queued</b> Sıraya alındı. {position}!",
             reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -723,7 +723,7 @@ async def oynat(_, message: Message):
         try:
             await callsmusic.set_stream(chat_id, file_path)
         except:
-            message.reply("Group Call is not connected or I can't join it")
+            message.reply("Grup Araması bağlı değil veya katılamıyorum")
             return
         await message.reply_photo(
             photo="final.png",
@@ -736,7 +736,7 @@ async def oynat(_, message: Message):
         return await lel.delete()
 
 
-@Client.on_message(filters.command("ytoynat") & filters.group & ~filters.edited)
+@Client.on_message(filters.command("serioynat") & filters.group & ~filters.edited)
 async def ytoynat(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
@@ -784,15 +784,15 @@ async def ytoynat(_, message: Message):
                 except Exception:
                     # print(e)
                     await lel.edit(
-                        f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add assistant to your Group and try again</b>",
+                        f"<b>🔴 Taşan Bekleme Hatası 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
+                        "\n\nVeya Grubunuza el ile asistan ekleyin ve yeniden deneyin</b>",
                     )
     try:
         await USER.get_chat(chid)
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i> {user.first_name} Userbot not in this chat, Ask admin to send /play command for first time or add {user.first_name} manually</i>"
+            f"<i> {user.first_name} Userbot bu sohbette yok, Yöneticiden göndermesini iste /oynat komut ilk kez veya ekle {user.first_name} manually</i>"
         )
         return
     await lel.edit("🔎 <b>İşleme alındı</b>")
@@ -821,7 +821,7 @@ async def ytoynat(_, message: Message):
 
     except Exception as e:
         await lel.edit(
-            "Song not found.Try another song or maybe spell it properly."
+            "Şarkı bulunamadı. Başka bir şarkı deneyin veya belki düzgün heceleyin."
         )
         print(str(e))
         return
