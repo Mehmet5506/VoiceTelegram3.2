@@ -21,24 +21,24 @@ async def addchannel(client, message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "@Mp3dinleme_Bot"
+        user.first_name = "VCsMusicBot"
 
     try:
         await USER.join_chat(invitelink)
         await USER.send_message(message.chat.id, "İstediğiniz gibi buraya katıldım")
     except UserAlreadyParticipant:
         await message.reply_text(
-            "<b>helper already in your chat</b>",
+            "<b>sohbetinizde zaten yardımcı</b>",
         )
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your group due to heavy join requests for userbot! Make sure user is not banned in group."
-            "\n\nOr manually add @abhinasroy to your Group and try again</b>",
+            f"<b>🛑 Taşan Bekleme Hatası 🛑 \n User {user.first_name} couldn't join your group due to heavy join requests for userbot! Make sure user is not banned in group."
+            "\n\nVeya grubunuza el ile @sesmusicasistan ekleyin ve yeniden deneyin</b>",
         )
         return
     await message.reply_text(
-        "<b>helper userbot joined your chat</b>",
+        "<b>yardımcı userbot sohbetinize katıldı</b>",
     )
 
 
@@ -49,7 +49,7 @@ async def rem(USER, message):
         await USER.leave_chat(message.chat.id)
     except:
         await message.reply_text(
-            f"<b>User couldn't leave your group! May be floodwaits."
+            f"<b>Kullanıcı grubunuzdan ayrılamadı! Floodwaits olabilir."
             "\n\nYa da beni manuel olarak grubunuza tekmelersiniz.</b>",
         )
         return
@@ -59,15 +59,15 @@ async def bye(client, message):
     if message.from_user.id in SUDO_USERS:
         left=0
         failed=0
-        lol = await message.reply("Assistant Leaving all chats")
+        lol = await message.reply("Asistan Tüm sohbetleri bırakma")
         async for dialog in USER.iter_dialogs():
             try:
                 await USER.leave_chat(dialog.chat.id)
                 left = left+1
-                await lol.edit(f"Assistant leaving... Left: {left} chats. Failed: {failed} chats.")
+                await lol.edit(f"Asistan ayrılıyor... Left: {left} chats. Failed: {failed} chats.")
             except:
                 failed=failed+1
-                await lol.edit(f"Assistant leaving... Left: {left} chats. Failed: {failed} chats.")
+                await lol.edit(f"Asistan ayrılıyor... Left: {left} chats. Failed: {failed} chats.")
             await asyncio.sleep(0.7)
         await client.send_message(message.chat.id, f"Left {left} chats. Failed {failed} chats.")
     
@@ -81,7 +81,7 @@ async def addcchannel(client, message):
       conid = conchat.linked_chat.id
       chid = conid
     except:
-      await message.reply("Is chat even linked")
+      await message.reply("Sohbet bile bağlantılı mı")
       return    
     chat_id = chid
     try:
@@ -95,7 +95,7 @@ async def addcchannel(client, message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "MusicBot"
+        user.first_name = "VCsMusicBot"
 
     try:
         await USER.join_chat(invitelink)
@@ -108,11 +108,11 @@ async def addcchannel(client, message):
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your channel due to heavy join requests for userbot! Make sure user is not banned in channel."
-            "\n\nOr manually add @abhinasroy to your Group and try again</b>",
+            f"<b>🛑 Taşan Bekleme Hatası 🛑 \n User {user.first_name} couldn't join your channel due to heavy join requests for userbot! Make sure user is not banned in channel."
+            "\n\nVeya grubunuza el ile @sesmusicasistan ekleyin ve yeniden deneyin</b>",
         )
         return
     await message.reply_text(
-        "<b>helper userbot joined your channel</b>",
+        "<b>yardımcı userbot kanalınıza katıldı</b>",
     )
     
