@@ -38,7 +38,7 @@ async def durdur(_, message: Message):
         await message.reply_text("❗ Hiçbir şey oynamıyor.!")
     else:
         callsmusic.pause(chat_id)
-        await message.reply_text("▶️ Paused!")
+        await message.reply_text("▶️ Duraklatıldı!")
 
 
 @Client.on_message(command("devam") & other_filters)
@@ -52,7 +52,7 @@ async def devam(_, message: Message):
         await message.reply_text("❗ Hiçbir şey duraklatılı değil!")
     else:
         callsmusic.resume(chat_id)
-        await message.reply_text("⏸ Resumed!")
+        await message.reply_text("⏸ Devam!")
 
 
 @Client.on_message(command("kapat") & other_filters)
@@ -95,7 +95,7 @@ async def atla(_, message: Message):
         skip = qeue.pop(0)
     if not qeue:
         return
-    await message.reply_text(f"- Skipped **{skip[0]}**\n- Now Playing **{qeue[0][0]}**")
+    await message.reply_text(f"- Atlanır **{skip[0]}**\n- Şimdi Yürütülen **{qeue[0][0]}**")
 
 
 @Client.on_message(filters.command("reload"))
