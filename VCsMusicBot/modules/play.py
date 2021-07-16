@@ -137,7 +137,7 @@ async def oynatlist(client, message):
     by = temp[0][1].mention(style="md")
     msg = "**Şimdi Yürütülen** in {}".format(message.chat.title)
     msg += "\n- " + now_playing
-    msg += "\n- Music botu tarafından" + by
+    msg += "\n- Siz tarafından" + by
     temp.pop(0)
     if temp:
         msg += "\n\n"
@@ -368,7 +368,7 @@ async def m_cb(b, cb):
         if (chet_id not in callsmusic.active_chats) or (
             callsmusic.active_chats[chet_id] == "playing"
         ):
-            await cb.answer("Sohbet bağlı değil veya zaten playng", show_alert=True)
+            await cb.answer("Sohbet bağlı değil veya zaten oynatılıyor", show_alert=True)
         else:
             callsmusic.resume(chet_id)
             await cb.answer("Müzik Devam Etti!")
@@ -406,7 +406,7 @@ async def m_cb(b, cb):
         if qeue:
             qeue.pop(0)
         if chet_id not in callsmusic.active_chats:
-            await cb.answer("Chat is not connected!", show_alert=True)
+            await cb.answer("Sohbet bağlı değil!", show_alert=True)
         else:
             queues.task_done(chet_id)
             if queues.is_empty(chet_id):
@@ -526,7 +526,7 @@ async def oynat(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             await lel.edit(
-                f"❌ Daha uzun videolar {DURATION_LIMIT} minute(s) aren't allowed to play!"
+                f"❌ Daha uzun videolar {DURATION_LIMIT} dakika(s) oynamasına izin verilmiyor!"
             )
             return
         keyboard = InlineKeyboardMarkup(
@@ -614,7 +614,7 @@ async def oynat(_, message: Message):
           results = YoutubeSearch(query, max_results=5).to_dict()
         except:
           await lel.edit("Bana oynayacak bir şey ver.")
-        # Looks like hell. Aren't it?? FUCK OFF
+        # Cehennem gibi görünüyor.. Öyle değil mi?? Git işine
         try:
             toxxt = "**Çalmak istediğiniz şarkıyı seçin**\n\n"
             j = 0
@@ -643,11 +643,11 @@ async def oynat(_, message: Message):
                 ]
             )       
             await lel.edit(toxxt,reply_markup=koyboard,disable_web_page_preview=True)
-            # WHY PEOPLE ALWAYS LOVE PORN ?? (A point to think)
+            # İNSANLAR NEDEN PORNOYU HER ZAMAN SEVER??? (Düşünmek için bir nokta)
             return
-            # Returning to pornhub
+            # Pornhub'a geri dönüyoruz derken bu uygulama zor ahahaha
         except:
-            await lel.edit("Seçmek için yeterli sonuç yok.. Doğrudan Müziği başlatılıyorum..")
+            await lel.edit("Seçmek için yeterli sonuç yok.. Doğrudan müziği başlatılıyorum. Lütfen bekleyiniz...")
                         
             # print(results)
             try:
@@ -706,7 +706,7 @@ async def oynat(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption=f"#⃣ İstediğiniz şarkı<b>queued</b> Sıraya alındı. {position}!",
+            caption=f"#⃣ İstediğiniz şarkı<b>Sıraya</b> Sıraya alındı. {position}!",
             reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -886,7 +886,7 @@ async def ytoynat(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ <b>Oynatılıyor</b> here the song requested by {} via YouTube Music".format(
+            caption="▶️ <b>Oynatılıyor</b> burada istenen şarkı {} YouTube müzik aracılığıyla".format(
                 message.from_user.mention()
             ),
         )
