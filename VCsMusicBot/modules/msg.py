@@ -40,9 +40,9 @@ f"""
 - /player: Oynatıcının Ayarlar menüsünü aç.
 - /skip: Geçerli parçayı atlar.
 - /pause: parçayı duraklat.
-- /rasume: Duraklatılmış parçayı devam ettiriyor.
+- /resume: Duraklatılmış parçayı devam ettiriyor.
 - /end: Medya kayıttan yürütmeyi durdurur.
-- /bilgi: Geçerli Çalma parçasını gösterir.
+- /current: Geçerli Çalma parçasını gösterir.
 - /playlist: Çalma listesini gösterir.
 
 **Player cmd ve diğer tüm cmd'ler /oynat, /geçerli ve /çalma listesi yalnızca grup yöneticileri içindir.**
@@ -86,7 +86,7 @@ f"""
 f"""
 **=>> Şarkı/Vid İndir:📥**
 - /video [şarkı ismi]: Youtube'dan video şarkı indirin
-- /bul [şarkı ismi]: Youtube'dan ses şarkısı indirin
+- /indir [şarkı ismi]: Youtube'dan ses şarkısı indirin
 - /saavn [şarkı ismi]: Saavn'den şarkı indir
 - /deezer [şarkı ismi]: Deezer'dan şarkı indirin
 
