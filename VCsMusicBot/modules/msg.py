@@ -1,7 +1,7 @@
 import os
 from VCsMusicBot.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL
 class Messages():
-      START_MSG = "**Merhaba ben  müzik botu👋 [{}](tg://user?id={})!**\n\n🤖 Telegram Groups'un sesli sohbetlerinde müzik çalmak için oluşturulan Mehmet_Bey tarafından düzenlenen müzik gelişmiş botuyum.\n\n✅ Daha fazla bilgi için/help."
+      START_MSG = "**Merhaba ben  müzik botu👋 [{}](tg://user?id={})!**\n\n🤖 Telegram Groups'un sesli sohbetlerinde müzik çalmak için oluşturulan Mehmet_Bey tarafından düzenlenen müzik gelişmiş botuyum.\n\n✅ Daha fazla bilgi için /help."
       HELP_MSG = [
         ".",
 f"""
@@ -37,7 +37,7 @@ f"""
 
 **=>> kayıttan yürütme ⏯**
 
-- /player: Oynatıcının Ayarlar menüsünü aç.
+- /panel: Oynatıcının Ayarlar menüsünü aç.
 - /atla: Geçerli parçayı atlar.
 - /durdur: parçayı duraklat.
 - /devam: Duraklatılmış parçayı devam ettiriyor.
@@ -53,17 +53,17 @@ f"""
 
 **⭕ Yalnızca bağlı grup yöneticileri için:**
 
-- /cplay <song name>: İstediğiniz şarkıyı çal.
-- /cdplay <song name>: Play song you requested via deezer.
-- /csplay <song name>: Play song you requested via jio saavn.
-- /cplaylist: Show now playing list.
-- /cccurrent: Show now playing.
-- /cplayer: Open music player settings panel.
-- /cpause: Pause song play.
-- /cresume: Resume song play.
-- /cskip: Play next song.
-- /cend: Stop music play.
-- /userbotjoinchannel: Invite assistant to your chat.
+- /cplay <şarkı ismi>: İstediğiniz şarkıyı çal.
+- /cdplay <şarkı ismi>: İstediğiniz şarkıyı deezer üzerinden çalın.
+- /csplay <şarkı ismi>: jio saavn aracılığıyla istediğiniz şarkıyı çalın.
+- /cplaylist: Şimdi yürüttt listesini göster.
+- /cccurrent: Şimdi oynatılır göster.
+- /cplayer: Müzik çalar ayarları panelini açma.
+- /cpause: Şarkı çalmayı duraklat.
+- /cresume: Şarkı çalmaya devam et.
+- /cskip: Sonraki şarkıyı çal.
+- /cend: Müzik çalmayı durdurma.
+- /userbotjoinchannel: Asistanı sohbetinize davet etme.
 
 **Kanal c yerine de kullanılabilir** ( /cplay = /channelplay )
 
@@ -85,14 +85,14 @@ f"""
 """,
 f"""
 **=>> Şarkı/Vid İndir:📥**
-- /video [song mame]: Download video song from youtube
-- /bul [song name]: Download audio song from youtube
-- /saavn [song name]: Download song from saavn
-- /deezer [song name]: Download song from deezer
+- /video [şarkı ismi]: Youtube'dan video şarkı indirin
+- /bul [şarkı ismi]: Youtube'dan ses şarkısı indirin
+- /saavn [şarkı ismi]: Saavn'den şarkı indir
+- /deezer [şarkı ismi]: Deezer'dan şarkı indirin
 
 **=>> Arama Araçları 🔍**
-- /link [song name]: Search youtube for songs
-- /lyrics [song name]: Get song lyrics
+- /link [şarkı ismi]: Youtube'da şarkı ara
+- /lyrics [şarkı ismi]: Şarkı sözlerini al
 """,
 
 f"""
