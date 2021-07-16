@@ -31,7 +31,7 @@ f"""
 
 - /oynat <şarkı ismi>: Aşağıda Verilen Klavyeyi Seçin.
 - /oynat <yt url>: Verilen YouTube URL'sini oynatma.
-- /ytoynat: YouTube Music üzerinden doğrudan şarkı çalma.
+- /serioynat: YouTube Music üzerinden doğrudan şarkı çalma.
 - /dplay: Deezer ile şarkı çal.
 - /splay: Jio saavn ile şarkı çal.
 
@@ -79,9 +79,9 @@ f"""
 f"""
 **=>> Diğer araçlar 😬**
 
-- /sohbet <on/off> : Müzik Çaları Etkinleştir/Devre Dışı Bırak
+- /durum: <on/off> : Müzik Çaları Etkinleştir/Devre Dışı Bırak
 - /reload: Grubunuzun yönetici bilgilerini güncelleştirin. Bot yöneticiyi tanımıyorsa deneyin
-- /userbotjoin: Invite @sesmusicasistan Sohbetinize userbot
+- /katil: Davet etmek için @sesmusicasistan Sohbetinize komutu gönderiniz. 
 """,
 f"""
 **=>> Şarkı/Vid İndir:📥**
