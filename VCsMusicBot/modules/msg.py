@@ -81,7 +81,7 @@ f"""
 
 - /musicplayer <on/off> : Müzik Çaları Etkinleştir/Devre Dışı Bırak
 - /reload: Grubunuzun yönetici bilgilerini güncelleştirin. Bot yöneticiyi tanımıyorsa deneyin
-- /userbotjoin: Invite @{sesmusicasistan} Sohbetinize userbot
+- /userbotjoin: Invite @sesmusicasistan Sohbetinize userbot
 """,
 f"""
 **=>> Şarkı/Vid İndir:📥**
