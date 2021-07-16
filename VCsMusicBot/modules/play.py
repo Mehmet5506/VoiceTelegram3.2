@@ -224,7 +224,7 @@ async def settings(client, message):
 
 
 @Client.on_message(
-    filters.command("musicplayer") & ~filters.edited & ~filters.bot & ~filters.private
+    filters.command("müzik") & ~filters.edited & ~filters.bot & ~filters.private
 )
 @authorized_users_only
 async def hfmm(_, message):
@@ -235,7 +235,7 @@ async def hfmm(_, message):
         return
     if len(message.command) != 2:
         await message.reply_text(
-            "I only recognize `/musicplayer on` and /musicplayer `off only`"
+            "Sadece tanıdım. `/müzik çalar açık ` ve /müzik çalar `yalnızca kapalı`"
         )
         return
     status = message.text.split(None, 1)[1]
@@ -262,7 +262,7 @@ async def hfmm(_, message):
         )
     else:
         await message.reply_text(
-            "I only recognize `/musicplayer on` and /musicplayer `off only`"
+            "Sadece tanıdım. `/müzik çalar açık` ve /müzik çalar `yalnızca kapalı`"
         )    
         
 
@@ -299,7 +299,7 @@ async def p_cb(b, cb):
 
 
 @Client.on_callback_query(
-    filters.regex(pattern=r"^(oynat|durdur|atla|leave|puse|devam|menu|cls)$")
+    filters.regex(pattern=r"^(oynat|durdur|atla|leave|puse|devam|menü|kapat)$")
 )
 @cb_admin_check
 async def m_cb(b, cb):
@@ -321,10 +321,10 @@ async def m_cb(b, cb):
         if (chet_id not in callsmusic.active_chats) or (
             callsmusic.active_chats[chet_id] == "paused"
         ):
-            await cb.answer("Chat is not connected!", show_alert=True)
+            await cb.answer("Sohbet bağlı değil!", show_alert=True)
         else:
             callsmusic.pause(chet_id)
-            await cb.answer("Music Paused!")
+            await cb.answer("Müzik Duraklatıldı!")
             await cb.message.edit(
                 updated_stats(m_chat, qeue), reply_markup=r_ply("play")
             )
@@ -333,10 +333,10 @@ async def m_cb(b, cb):
         if (chet_id not in callsmusic.active_chats) or (
             callsmusic.active_chats[chet_id] == "playing"
         ):
-            await cb.answer("Chat is not connected!", show_alert=True)
+            await cb.answer("Sohbet bağlı değil!", show_alert=True)
         else:
             callsmusic.resume(chet_id)
-            await cb.answer("Music Resumed!")
+            await cb.answer("Müzik Devam Etti!")
             await cb.message.edit(
                 updated_stats(m_chat, qeue), reply_markup=r_ply("pause")
             )
@@ -380,11 +380,11 @@ async def m_cb(b, cb):
         else:
             callsmusic.pause(chet_id)
             await cb.answer("Müzik Duraklatıldı!")
-    elif type_ == "cls":
+    elif type_ == "kapat":
         await cb.answer("Kapalı menü")
         await cb.message.delete()
 
-    elif type_ == "menu":
+    elif type_ == "menü":
         stats = updated_stats(cb.message.chat, qeue)
         await cb.answer("Menü açıldı")
         marr = InlineKeyboardMarkup(
@@ -496,7 +496,7 @@ async def oynat(_, message: Message):
         )
         return
     text_links=None
-    await lel.edit("🔎 <b>Finding</b>")
+    await lel.edit("🔎 <b>Hemen işleniyor</b>")
     if message.reply_to_message:
         if message.reply_to_message.audio:
             pass
@@ -804,7 +804,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("🎵 <b>Processing</b>")
+    await lel.edit("🎵 <b>Lütfen bekleyiniz.</b>")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
