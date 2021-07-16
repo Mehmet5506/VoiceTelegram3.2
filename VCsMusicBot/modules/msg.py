@@ -72,7 +72,7 @@ f"""
 1) Kanal kimliğinizi alın.
 2) Küçük bir grup oluşturma: Kanal Müziği: your_channel_id
 3) Tam perms ile Kanal yöneticisi olarak bot ekleme
-4) Add @{sesmusicasistan} yönetici olarak kanala.
+4) Add @sesmusicasistan yönetici olarak kanala.
 5) Grubunuza komut göndermeniz yeterlidir.
 """,
 
