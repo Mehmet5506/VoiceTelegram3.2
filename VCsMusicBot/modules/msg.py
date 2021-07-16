@@ -29,21 +29,21 @@ f"""
 
 **=>> Şarkı Çalma 🎧**
 
-- /oynat <şarkı ismi>: Aşağıda Verilen Klavyeyi Seçin.
-- /oynat <yt url>: Verilen YouTube URL'sini oynatma.
-- /serioynat: YouTube Music üzerinden doğrudan şarkı çalma.
+- /play <şarkı ismi>: Aşağıda Verilen Klavyeyi Seçin.
+- /play <yt url>: Verilen YouTube URL'sini oynatma.
+- /ytplay: YouTube Music üzerinden doğrudan şarkı çalma.
 - /dplay: Deezer ile şarkı çal.
 - /splay: Jio saavn ile şarkı çal.
 
 **=>> kayıttan yürütme ⏯**
 
-- /panel: Oynatıcının Ayarlar menüsünü aç.
-- /atla: Geçerli parçayı atlar.
-- /durdur: parçayı duraklat.
-- /devam: Duraklatılmış parçayı devam ettiriyor.
-- /kapat: Medya kayıttan yürütmeyi durdurur.
+- /player: Oynatıcının Ayarlar menüsünü aç.
+- /skip: Geçerli parçayı atlar.
+- /pause: parçayı duraklat.
+- /rasume: Duraklatılmış parçayı devam ettiriyor.
+- /end: Medya kayıttan yürütmeyi durdurur.
 - /bilgi: Geçerli Çalma parçasını gösterir.
-- /oynatlist: Çalma listesini gösterir.
+- /playlist: Çalma listesini gösterir.
 
 **Player cmd ve diğer tüm cmd'ler /oynat, /geçerli ve /çalma listesi yalnızca grup yöneticileri içindir.**
 """,
@@ -63,7 +63,7 @@ f"""
 - /cresume: Şarkı çalmaya devam et.
 - /cskip: Sonraki şarkıyı çal.
 - /cend: Müzik çalmayı durdurma.
-- /userbotjoinchannel: Asistanı sohbetinize davet etme.
+- /katilchannel: Asistanı sohbetinize davet etme.
 
 **Kanal c yerine de kullanılabilir** ( /cplay = /channelplay )
 
@@ -79,7 +79,7 @@ f"""
 f"""
 **=>> Diğer araçlar 😬**
 
-- /durum: <on/off> : Müzik Çaları Etkinleştir/Devre Dışı Bırak
+- /musicplayer: <on/off> : Müzik Çaları Etkinleştir/Devre Dışı Bırak
 - /reload: Grubunuzun yönetici bilgilerini güncelleştirin. Bot yöneticiyi tanımıyorsa deneyin
 - /katil: Davet etmek için @sesmusicasistan Sohbetinize komutu gönderiniz. 
 """,
@@ -91,7 +91,7 @@ f"""
 - /deezer [şarkı ismi]: Deezer'dan şarkı indirin
 
 **=>> Arama Araçları 🔍**
-- /link [şarkı ismi]: Youtube'da şarkı ara
+- /linkbul [şarkı ismi]: Youtube'da şarkı ara
 - /lyrics [şarkı ismi]: Şarkı sözlerini al
 """,
 
