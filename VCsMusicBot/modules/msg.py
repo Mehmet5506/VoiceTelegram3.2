@@ -1,7 +1,7 @@
 import os
 from VCsMusicBot.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL
 class Messages():
-      START_MSG = "**Merhaba ben  müzik botu👋 [{}](tg://user?id={})!**\n\n🤖 Telegram Groups'un sesli sohbetlerinde müzik çalmak için oluşturulan Mehmet_Bey tarafından düzenlenen gelişmiş müzik botuyum.\n\n✅ Daha fazla bilgi için /help."
+      START_MSG = "**Merhaba ben  müzik botu👋 [{}](tg://user?id={})!**\n\n🤖 Telegram Groups'un sesli sohbetlerinde müzik çalmak için oluşturulan @Byboss tarafından düzenlenen gelişmiş müzik botuyum.\n\n✅ Daha fazla bilgi için /help."
       HELP_MSG = [
         ".",
 f"""
@@ -9,7 +9,7 @@ f"""
 
 ⭕ Grubunuzun sesli sohbetinde ve kanal sesli sohbetlerinde müzik çalabilirim.
 
-⭕ Assistant: @Sesmusicasistan\n\nİleri'yi tıklatın ➡️ yönergeler için.**
+⭕ Assistant: @lacasademusic\n\nİleri'yi tıklatın ➡️ yönergeler için.**
 """,
 
 f"""
