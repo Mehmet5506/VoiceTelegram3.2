@@ -14,7 +14,7 @@ def _start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Beni Grubunuza Ekleyin ➕", url=f"https://t.me/Mp3dinleme_Bot?startgroup=true")],
+                        "➕ Beni Grubunuza Ekleyin ➕", url=f"https://t.me/LaCasadeMusicbot?startgroup=true")],
                 [
                     InlineKeyboardButton(
                         "👥 Group", url=f"https://t.me/kurtadamoyunuu"), 
