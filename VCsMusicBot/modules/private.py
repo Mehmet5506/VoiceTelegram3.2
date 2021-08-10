@@ -17,19 +17,19 @@ def _start(client, message):
                         "➕ Beni Grubunuza Ekleyin ➕", url=f"https://t.me/Mp3dinleme_Bot?startgroup=true")],
                 [
                     InlineKeyboardButton(
-                        "👥 Group", url=f"https://t.me/Sohbetskyfall"), 
+                        "👥 Group", url=f"https://t.me/kurtadamoyunuu"), 
                     InlineKeyboardButton(
-                        "Owner 📢", url=f"https://t.me/MehmetBabaTR"), 
+                        "Owner 📢", url=f"https://t.me/byboss"), 
                 ],[
                     InlineKeyboardButton(
-                        "🔥 Proje Kanalı🔥", url=f"https://t.me/kanalEfsanestar"), 
+                        "🔥 Proje Kanalı🔥", url=f"https://t.me/sohbety"), 
                 ]
             ]
         ),
         reply_to_message_id=message.message_id
         )
 
-@Client.on_message(filters.command(["start","start@Mp3dinleme_Bot"]) & ~filters.private & ~filters.channel)
+@Client.on_message(filters.command(["start","start@LaCasadeMusicbot"]) & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
     await message.reply_text(
         f"""**Müzik botu çevrimiçi.**""",
