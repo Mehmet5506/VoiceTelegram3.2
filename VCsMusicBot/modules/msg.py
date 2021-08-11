@@ -5,7 +5,7 @@ class Messages():
       HELP_MSG = [
         ".",
 f"""
-**Merhaba ben Sahip 🇹🇷 [Mami](https://t.me/byboss) müzik botuna, Hoşgeldiniz Airmusic_Bot
+**Merhaba ben Sahip 🇹🇷 [Mami](https://t.me/byboss) müzik botuna, Hoşgeldiniz @SoulBossMusic_bot
 
 ⭕ Grubunuzun sesli sohbetinde ve kanal sesli sohbetlerinde müzik çalabilirim.
 
