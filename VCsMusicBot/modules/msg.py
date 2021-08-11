@@ -81,7 +81,7 @@ f"""
 
 - /musicplayer: <on/off> : Müzik Çaları Etkinleştir/Devre Dışı Bırak
 - /reload: Grubunuzun yönetici bilgilerini güncelleştirin. Bot yöneticiyi tanımıyorsa deneyin
-- /katil: Davet etmek için @sesmusicasistan Sohbetinize komutu gönderiniz. 
+- /katil: Davet etmek için @AirmusicAsistan Sohbetinize komutu gönderiniz. 
 """,
 f"""
 **=>> Şarkı/Vid İndir:📥**
