@@ -17,7 +17,7 @@ async def pmPermit(client: USER, message: Message):
                 return
             await USER.send_message(
                 message.chat.id,
-                "Merhaba 😎,, Nasılsın Bu Userbot Karşılama mesajı.\n\n⚠️Rules:\n- Sohbet etmek yasak bilgileri Okuyunuz\n-Mesaj yazma spam sayılıyor. \n\n 🚨 **MÜZİK BOTUNU GRUPLARINIZA ALMAK İÇİN /katil KOMUTUNA BASINIZ İLK YAPMANIZ GEREKEN, BOTU GRUBUNUZA EKLEMEK** Airmusic_Bot * Denemeye değer 🤔**\n\n**Bilgileri okudunuz. KİŞİSEL BİLGİLERİ Paylaşmayınız. İyi günler diliyorum. 🚨**\n\n**🤖 Developed by @Byboss**",
+                "Merhaba 😎,, Nasılsın Bu Userbot Karşılama mesajı.\n\n⚠️Rules:\n- Sohbet etmek yasak bilgileri Okuyunuz\n-Mesaj yazma spam sayılıyor. \n\n 🚨 **MÜZİK BOTUNU GRUPLARINIZA ALMAK İÇİN /katil KOMUTUNA BASINIZ İLK YAPMANIZ GEREKEN, BOTU GRUBUNUZA EKLEMEK** @SoulBossMusic_bot * Denemeye değer 🤔**\n\n**Bilgileri okudunuz. KİŞİSEL BİLGİLERİ Paylaşmayınız. İyi günler diliyorum. 🚨**\n\n**🤖 Developed by @Byboss**",
             )
             return
 
