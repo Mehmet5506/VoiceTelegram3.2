@@ -1,4 +1,4 @@
-𝗛𝗘𝗟𝗟𝗢 𝗦𝗜𝗥 𝗜 𝗔𝗠 𝗔𝗕𝗛𝗜𝗡𝗔𝗦 𝗥𝗢𝗬
+MERHABA EFENDIM BEN MEHMET BEY 
 <h1 align="centre">VCsMusicBot v5.0</h1>
 
 ### Telegram Group ve Channel Voice Chats'te müzik çalabilen bir bot
