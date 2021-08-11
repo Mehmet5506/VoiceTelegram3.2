@@ -53,7 +53,7 @@ def cb_admin_check(func: Callable) -> Callable:
         if cb.from_user.id in admemes:
             return await func(client, cb)
         else:
-            await cb.answer("You ain't allowed!", show_alert=True)
+            await cb.answer("Buna iznin yok.!", show_alert=True)
             return
 
     return decorator
@@ -433,7 +433,7 @@ async def m_cb(b, cb):
             await callsmusic.stop(chet_id)
             await cb.message.edit("Successfully Left the Chat!")
         else:
-            await cb.answer("Chat is not connected!", show_alert=True)
+            await cb.answer("Sohbet bağlı değil!", show_alert=True)
 
 
 @Client.on_message(command("play") & other_filters)
@@ -1080,7 +1080,7 @@ async def jiosaavn(client: Client, message_: Message):
                     # print(e)
                     await lel.edit(
                         f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add @sesmusicasistan to your Group and try again</b>",
+                        "\n\nOr manually add @AirmusicAsistan to your Group and try again</b>",
                     )
     try:
         await USER.get_chat(chid)
