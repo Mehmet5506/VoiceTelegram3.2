@@ -17,12 +17,12 @@ def _start(client, message):
                         "➕ Beni Grubunuza Ekleyin ➕", url=f"https://t.me/LaCasadeMusicbot?startgroup=true")],
                 [
                     InlineKeyboardButton(
-                        "👥 Group", url=f"https://t.me/kurtadamoyunuu"), 
+                        "👥 Group", url=f"https://t.me/sohbety"), 
                     InlineKeyboardButton(
                         "Owner 📢", url=f"https://t.me/byboss"), 
                 ],[
                     InlineKeyboardButton(
-                        "🔥 Proje Kanalı🔥", url=f"https://t.me/sohbety"), 
+                        "🔥 Proje Kanalı🔥", url=f"https://t.me/djboss"), 
                 ]
             ]
         ),
