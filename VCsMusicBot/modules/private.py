@@ -29,7 +29,7 @@ def _start(client, message):
         reply_to_message_id=message.message_id
         )
 
-@Client.on_message(filters.command(["start","startAirmusic_Bot"]) & ~filters.private & ~filters.channel)
+@Client.on_message(filters.command(["start","start@SoulBossMusic_bot"]) & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
     await message.reply_text(
         f"""**Müzik botu çevrimiçi.**""",
@@ -85,9 +85,9 @@ def map(pos):
     elif(pos==len(tr.HELP_MSG)-1):
         url = f"https://t.me/Djbyboss"
         button = [
-            [InlineKeyboardButton("➕ Add me to your Group ➕", url=f"https://t.me/Airmusic_Bot?startgroup=true")],
+            [InlineKeyboardButton("➕ Add me to your Group ➕", url=f"https://t.me/SoulBossMusic_bot?startgroup=true")],
             [InlineKeyboardButton(text = '👥 Group', url=f"https://t.me/Djbyboss"),
-             InlineKeyboardButton(text = 'Channel 📢', url=f"https://t.me/sohnety")],
+             InlineKeyboardButton(text = 'Channel 📢', url=f"https://t.me/sohbety")],
             [InlineKeyboardButton(text = '🔥 Source Code 🔥', url=f"https://{SOURCE_CODE}")],
             [InlineKeyboardButton(text = '◀️ Back', callback_data = f"help+{pos-1}")]
         ]
@@ -100,7 +100,7 @@ def map(pos):
         ]
     return button
 
-@Client.on_message(filters.command(["help","helpAirmusic_Bot"]) & ~filters.private & ~filters.channel)
+@Client.on_message(filters.command(["help","helpSoulBossMusic_bot"]) & ~filters.private & ~filters.channel)
 async def ghelp(_, message: Message):
     await message.reply_text(
         f"""**Merhaba efendim. !ben @byboss için yapılmış müzik botu! Telgraf gruplarının ve kanallarının sesli sohbetlerinde müzik çalabilirim.**""",
