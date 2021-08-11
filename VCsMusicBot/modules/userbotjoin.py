@@ -21,7 +21,7 @@ async def addchannel(client, message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "VCsMusicBot"
+        user.first_name = "Airmusic_Bot"
 
     try:
         await USER.join_chat(invitelink)
@@ -34,7 +34,7 @@ async def addchannel(client, message):
         print(e)
         await message.reply_text(
             f"<b>🛑 Taşan Bekleme Hatası 🛑 \n User {user.first_name} couldn't join your group due to heavy join requests for userbot! Make sure user is not banned in group."
-            "\n\nVeya grubunuza el ile @sesmusicasistan ekleyin ve yeniden deneyin</b>",
+            "\n\nVeya grubunuza el ile @AirmusicAsistan ekleyin ve yeniden deneyin</b>",
         )
         return
     await message.reply_text(
@@ -88,28 +88,28 @@ async def addcchannel(client, message):
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "<b>Add me as admin of yor channel first</b>",
+            "<b>Önce beni yor kanalının yöneticisi olarak ekle</b>",
         )
         return
 
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "VCsMusicBot"
+        user.first_name = "Airmusic_Bot"
 
     try:
         await USER.join_chat(invitelink)
         await USER.send_message(message.chat.id, "I joined here as you requested")
     except UserAlreadyParticipant:
         await message.reply_text(
-            "<b>helper already in your channel</b>",
+            "<b>kanalınızda zaten yardımcı</b>",
         )
         return
     except Exception as e:
         print(e)
         await message.reply_text(
             f"<b>🛑 Taşan Bekleme Hatası 🛑 \n User {user.first_name} couldn't join your channel due to heavy join requests for userbot! Make sure user is not banned in channel."
-            "\n\nVeya grubunuza el ile @sesmusicasistan ekleyin ve yeniden deneyin</b>",
+            "\n\nVeya grubunuza el ile @AirmusicAsistan ekleyin ve yeniden deneyin</b>",
         )
         return
     await message.reply_text(
