@@ -5,11 +5,11 @@ class Messages():
       HELP_MSG = [
         ".",
 f"""
-**Merhaba ben Mehmet_Bey müzik botu, Hoşgeldiniz Abelia_Musicbot
+**Merhaba ben Mami [https:/t.me/@byboss"] müzik botuna, Hoşgeldiniz Airmusic_Bot
 
 ⭕ Grubunuzun sesli sohbetinde ve kanal sesli sohbetlerinde müzik çalabilirim.
 
-⭕ Assistant: @lacasademusic\n\nİleri'yi tıklatın ➡️ yönergeler için.**
+⭕ Assistant: @AirmusicAsistan\n\nİleri'yi tıklatın ➡️ yönergeler için.**
 """,
 
 f"""
@@ -18,7 +18,7 @@ f"""
 1) Bot yöneticisi yap (Cplay kullanıyorsanız grupla ve kanalda)
 2) Sesli sohbet başlatma
 3) Deneyin /oynat <şarkı ismi> ilk kez bir yönetici tarafından
- Userbot katıldıysa müziğin tadını çıkarın, Eklenmezse @sesmusicasistan grubunuza ve yeniden deneyin.
+ Userbot katıldıysa müziğin tadını çıkarın, Eklenmezse @AirmusicAsistan grubunuza ve yeniden deneyin.
 
 **Kanal Müziği Çalma İçin**
 1) Beni kanalınızın yöneticisi yap.
