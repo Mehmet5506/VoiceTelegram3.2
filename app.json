@@ -1,9 +1,9 @@
 {
-  "name": "VCsMusicBot",
+  "name": "VoiceTelegram3.2",
   "logo": "https://telegra.ph/file/1cea93996800a52b2ae88.png",
   "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/Mehmetbaba55/VscMehmetbeybot",
+  "repository": "https://github.com/Mehmet5506/VoiceTelegram3.2",
   "stack": "container",
   "env": {
     "SESSION_NAME": {
@@ -31,7 +31,7 @@
     "PROJECT_NAME": {
       "description": "Your MusicPlayer project Name.",
       "required": false,
-      "value": "VCsMusicBot"
+      "value": "VoiceTelegram3.2"
     },
     "ASSISTANT_NAME": {
       "description": "Your MusicPlayer's assistant Username without @.",
@@ -45,7 +45,7 @@
     "BG_IMAGE": {
       "description": "BG image of bot (Use transparent one) [IGNORE].",
       "required": false,
-      "value": "https://telegra.ph/file/1cea93996800a52b2ae88.png"
+      "value": "https://i.ibb.co/dDzmMx3/Photo-1629584953708.jpg"
     },     
     "Father": {
       "description": "your username without @ [Leave this if you don't have one].",
@@ -72,7 +72,7 @@
     "DURATION_LIMIT": {
       "description": "Max audio duration limit for downloads (minutes).",
       "required": true,
-      "value": "10"
+      "value": "45"
     }
   }
 }
