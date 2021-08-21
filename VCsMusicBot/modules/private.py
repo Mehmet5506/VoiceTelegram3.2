@@ -14,7 +14,7 @@ def _start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Beni Grubunuza Ekleyin ➕", url=f"https://t.me/Mp3dinleme_bot?startgroup=true")],
+                        "➕ Beni Grubunuza Ekleyin ➕", url=f"https://t.me/Mp3dinleme_Bot?startgroup=true")],
                 [
                     InlineKeyboardButton(
                         "👥 Group", url=f"https://t.me/sohbetneresi"), 
@@ -85,10 +85,10 @@ def map(pos):
     elif(pos==len(tr.HELP_MSG)-1):
         url = f"https://t.me/Djbyboss"
         button = [
-            [InlineKeyboardButton("➕ Add me to your Group ➕", url=f"https://t.me/Mpdinleme_bot?startgroup=true")],
+            [InlineKeyboardButton("➕ Add me to your Group ➕", url=f"https://t.me/Mpdinleme_Bot?startgroup=true")],
             [InlineKeyboardButton(text = '👥 Group', url=f"https://t.me/Sohbetneresi"),
              InlineKeyboardButton(text = 'Channel 📢', url=f"https://t.me/sohbetdestek")],
-            [InlineKeyboardButton(text = '🔥 Source Code 🔥', url=f"https://{SOURCE_CODE}")],
+            [InlineKeyboardButton(text = '🔥 Source Code 🔥', url=f"https://github.com/Mehmet5506/VoiceTelegram3.2")],
             [InlineKeyboardButton(text = '◀️ Back', callback_data = f"help+{pos-1}")]
         ]
     else:
@@ -100,7 +100,7 @@ def map(pos):
         ]
     return button
 
-@Client.on_message(filters.command(["help","helpMp3dinleme_bot"]) & ~filters.private & ~filters.channel)
+@Client.on_message(filters.command(["help","helpMp3dinleme_Bot"]) & ~filters.private & ~filters.channel)
 async def ghelp(_, message: Message):
     await message.reply_text(
         f"""**Merhaba efendim. !Ben @Mahoaga Tarafından yapılmış müzik botu! Telgraf gruplarının ve kanallarının sesli sohbetlerinde müzik çalabilirim.**""",
