@@ -1,15 +1,15 @@
 import os
 from VCsMusicBot.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL
 class Messages():
-      START_MSG = "**Merhaba ben  müzik botu👋 [{}](tg://user?id={})!**\n\n🤖 Telegram Groups'un sesli sohbetlerinde müzik çalmak için oluşturulan @Byboss tarafından düzenlenen gelişmiş müzik botuyum.\n\n✅ Daha fazla bilgi için /help."
+      START_MSG = "**Merhaba ben  müzik botu👋 [{}](tg://user?id={})!**\n\n🤖 Telegram Groups'un sesli sohbetlerinde müzik çalmak için oluşturulan @Mahoaga tarafından düzenlenen müzik botuyum.\n\n✅ Daha fazla bilgi için /help."
       HELP_MSG = [
         ".",
 f"""
-**Merhaba ben Sahip 🇹🇷 [Mami](https://t.me/byboss) müzik botuna, Hoşgeldiniz @SoulBossMusic_bot
+**Merhaba ben Sahip 🇹🇷 [Maho Ağa](https://t.me/Mahoaga) müzik botuna, Hoşgeldiniz @Mp3dinleme_Bot 👮‍♂️
 
 ⭕ Grubunuzun sesli sohbetinde ve kanal sesli sohbetlerinde müzik çalabilirim.
 
-⭕ Assistant: @AirmusicAsistan\n\nİleri'yi tıklatın ➡️ yönergeler için.**
+⭕ Assistant: @Sesmusicasistan\n\nİleri'yi tıklatın ➡️ yönergeler için.**
 """,
 
 f"""
@@ -18,7 +18,7 @@ f"""
 1) Bot yöneticisi yap (Cplay kullanıyorsanız grupla ve kanalda)
 2) Sesli sohbet başlatma
 3) Deneyin /oynat <şarkı ismi> ilk kez bir yönetici tarafından
- Userbot katıldıysa müziğin tadını çıkarın, Eklenmezse @AirmusicAsistan grubunuza ve yeniden deneyin.
+ Userbot katıldıysa müziğin tadını çıkarın, Eklenmezse @sesmusicasistan grubunuza ve yeniden deneyin.
 
 **Kanal Müziği Çalma İçin**
 1) Beni kanalınızın yöneticisi yap.
@@ -72,7 +72,7 @@ f"""
 1) Kanal kimliğinizi alın.
 2) Küçük bir grup oluşturma: Kanal Müziği: your_channel_id
 3) Tam perms ile Kanal yöneticisi olarak bot ekleme
-4) Add @AirmusicAsistan yönetici olarak kanala.
+4) Sahip @Sesmusicasistan yönetici olarak kanala ekleyiniz. 
 5) Grubunuza komut göndermeniz yeterlidir.
 """,
 
@@ -81,7 +81,7 @@ f"""
 
 - /musicplayer: <on/off> : Müzik Çaları Etkinleştir/Devre Dışı Bırak
 - /reload: Grubunuzun yönetici bilgilerini güncelleştirin. Bot yöneticiyi tanımıyorsa deneyin
-- /katil: Davet etmek için @AirmusicAsistan Sohbetinize komutu gönderiniz. 
+- /katil: Davet etmek için @Sesmusicasistan Sohbetinize komutu gönderiniz. 
 """,
 f"""
 **=>> Şarkı/Vid İndir:📥**
