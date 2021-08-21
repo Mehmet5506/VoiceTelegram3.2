@@ -185,7 +185,7 @@ def r_ply(type_):
             [
                 InlineKeyboardButton("Playlist 📖", "playlist"),
             ],
-            [InlineKeyboardButton("❌ Close", "cls")],
+            [InlineKeyboardButton("❌ Kapat", "cls")],
         ]
     )
     return mar
@@ -399,7 +399,7 @@ async def m_cb(b, cb):
                 [
                     InlineKeyboardButton("Playlist 📖", "playlist"),
                 ],
-                [InlineKeyboardButton("❌ Close", "cls")],
+                [InlineKeyboardButton("❌ Kapat", "cls")],
             ]
         )
         await cb.message.edit(stats, reply_markup=marr)
@@ -536,7 +536,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                     InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
                 ],
-                [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+                [InlineKeyboardButton(text="❌ Kapat", callback_data="cls")],
             ]
         )
         file_name = get_file_name(audio)
@@ -595,9 +595,9 @@ async def play(_, message: Message):
                 ],
                 [
                     InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                    InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
+                    InlineKeyboardButton(text="İndir 📥", url=f"{dlurl}"),
                 ],
-                [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+                [InlineKeyboardButton(text="❌ Kapat", callback_data="cls")],
             ]
         )
         requested_by = message.from_user.first_name
@@ -688,9 +688,9 @@ async def play(_, message: Message):
                     ],
                     [
                         InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                        InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
+                        InlineKeyboardButton(text="İndir 📥", url=f"{dlurl}"),
                     ],
-                    [InlineKeyboardButton(text="owner", callback_data="https://t.me/MehmetBabaTR")],
+                    [InlineKeyboardButton(text="owner", callback_data="https://t.me/Mahoaga")],
                 ]
             )
             requested_by = message.from_user.first_name
@@ -846,9 +846,9 @@ async def ytplay(_, message: Message):
             ],
             [
                 InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
+                InlineKeyboardButton(text="İndir 📥", url=f"{dlurl}"),
             ],
-            [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+            [InlineKeyboardButton(text="❌ Kapat", callback_data="cls")],
         ]
     )
     requested_by = message.from_user.first_name
@@ -988,7 +988,7 @@ async def deezer(client: Client, message_: Message):
                 InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
             ],
             [InlineKeyboardButton(text="Listen On Deezer 🎬", url=f"{url}")],
-            [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+            [InlineKeyboardButton(text="❌ Kapat", callback_data="cls")],
         ]
     )
     file_path = await convert(wget.download(url))
@@ -1080,7 +1080,7 @@ async def jiosaavn(client: Client, message_: Message):
                     # print(e)
                     await lel.edit(
                         f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add @AirmusicAsistan to your Group and try again</b>",
+                        "\n\nOr manually add @Sesmusicasistan to your Group and try again</b>",
                     )
     try:
         await USER.get_chat(chid)
@@ -1234,9 +1234,9 @@ async def lol_cb(b, cb):
             ],
             [
                 InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
+                InlineKeyboardButton(text="İndir 📥", url=f"{dlurl}"),
             ],
-            [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+            [InlineKeyboardButton(text="❌ Kapat", callback_data="cls")],
         ]
     )
     requested_by = useer_name
