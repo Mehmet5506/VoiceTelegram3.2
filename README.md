@@ -1,5 +1,5 @@
 MERHABA EFENDIM BEN MEHMET BEY 
-<h1 align="centre">Voice Telegram3.2</h1>
+<h1 align="centre">Telegram Sesli Müzik</h1>
 
 ### Telegram Group ve Channel Voice Chats'te müzik çalabilen bir bot
 
