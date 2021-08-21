@@ -21,7 +21,7 @@ async def addchannel(client, message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "Airmusic_Bot"
+        user.first_name = "Mp3dinleme_Bot"
 
     try:
         await USER.join_chat(invitelink)
@@ -34,7 +34,7 @@ async def addchannel(client, message):
         print(e)
         await message.reply_text(
             f"<b>🛑 Taşan Bekleme Hatası 🛑 \n User {user.first_name} couldn't join your group due to heavy join requests for userbot! Make sure user is not banned in group."
-            "\n\nVeya grubunuza el ile @AirmusicAsistan ekleyin ve yeniden deneyin</b>",
+            "\n\nVeya grubunuza el ile @Sesmusicasistan ekleyin ve yeniden deneyin</b>",
         )
         return
     await message.reply_text(
@@ -95,7 +95,7 @@ async def addcchannel(client, message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "Airmusic_Bot"
+        user.first_name = "Mp3dinleme_Bot"
 
     try:
         await USER.join_chat(invitelink)
@@ -109,7 +109,7 @@ async def addcchannel(client, message):
         print(e)
         await message.reply_text(
             f"<b>🛑 Taşan Bekleme Hatası 🛑 \n User {user.first_name} couldn't join your channel due to heavy join requests for userbot! Make sure user is not banned in channel."
-            "\n\nVeya grubunuza el ile @AirmusicAsistan ekleyin ve yeniden deneyin</b>",
+            "\n\nVeya grubunuza el ile @Sesmusicasistan sistan ekleyin ve yeniden deneyin</b>",
         )
         return
     await message.reply_text(
