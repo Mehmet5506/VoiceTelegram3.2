@@ -1,6 +1,6 @@
 <h1 align="centre">Telegram Müzik Botu 🎶</h1>
 
-### Telegram Group ve Channel Voice Chats'te müzik çalabilen bir bot
+### Telegram Group ve Channel Voice Chats'te müzik çalabilen bir bot uygulaması.
 
 <p align="center">
   <a href="">
