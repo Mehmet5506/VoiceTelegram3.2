@@ -131,5 +131,5 @@ If you donlt like to play in linked channel:
 
 ### Credits
 #### Special Credits
-- [abhinasroy](https://t.me/abhinasroy): LushaiMusic Developer
-- [musicroybot](https://t.me/abhinasroy): Callsmusic Developer
+- [Mami Bey](https://t.me/Byboss): SoulbossMusic Developer
+- [Maho Ağa](https://t.me/Mahoaga): Taliamusic Developer
