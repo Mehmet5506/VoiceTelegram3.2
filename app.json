@@ -45,7 +45,7 @@
     "BG_IMAGE": {
       "description": "BG image of bot (Use transparent one) [IGNORE].",
       "required": false,
-      "value": "https://i.ibb.co/dDzmMx3/Photo-1629584953708.jpg"
+      "value": "https://telegra.ph/file/cd0b87484429704c7b935.png"
     },     
     "Father": {
       "description": "your username without @ [Leave this if you don't have one].",
